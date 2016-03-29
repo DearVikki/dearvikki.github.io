@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            临时草稿
+        </title>
+        <link rel="stylesheet" type="text/css" href="semantic/semantic.css"/>
+        <link rel="stylesheet" type="text/css" href="caogaolinshi.css"/>
+    </head>
+    <body>
+        <div id="todo">
+            <div  class="ui action input">
+                <input type="text" v-model="list" placeholder="Add…"/>
+                <button class="ui button" @click="add()">
+                    <i class="plus icon">
+                    </i>
+                </button>
+            </div>
+            <div class="ui middle aligned divided list" v-for="list in lists">
+                <div class="item">
+                    <a class="ui tag label td">
+                        {{list}}
+                    </a>
+                    <a class="ui label delete">
+                        <i class="delete icon" @click="delete(list)">
+                        </i>
+                    </a>
+                </div>
+            </div>
+            <div id="done">
+                <p>
+                    已完成:
+                </p>
+                <div class="ui middle aligned divided list" v-for="doneList in doneLists">
+                    <div class="item">
+                        <a class="ui tag label td">
+                            {{doneList}}
+                        </a>
+                        <a class="ui label">
+                            <i class="delete icon" @click="deleteForever(doneList)">
+                            </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="pw">
+            <div  class="ui input">
+                <input class="pw" type="password" v-model="pw" placeholder="password…"/>
+            </div>
+            <div class="ui progress error" v-bind:class="{ 'error': pw.length<5 && pw.length != 0, 'warning': pw.length>=5 && pw.length < 8, 'success': pw.length>=8}">
+                <div class="bar">
+                    <div class="progress">
+                    </div>
+                </div>
+                <div class="label pw">
+                    {{mes}}
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="jquery.js">
+    </script>
+    <script src="vue.js">
+    </script>
+    <script src="caogaolinshi.js">
+    </script>
+    <script src="semantic/semantic.js">
+    </script>
+</script>
+</html>

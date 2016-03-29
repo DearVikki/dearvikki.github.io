@@ -1,0 +1,22 @@
+.wq-dropdownContainer {
+    height: 33px;
+    margin-top: 30px;
+}
+
+.wq-dropdown {
+    width: 100px;
+    height: 33px;
+}
+
+.wq-dropdown li {
+    width: 100px;
+    font-size: 14px;
+}
+
+span {
+    float: right;
+    margin-right: 15px;
+}
+/*.option:hover{
+	background-color: pink;
+}*/

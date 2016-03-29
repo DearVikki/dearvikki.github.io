@@ -1,0 +1,51 @@
+#todo {
+    width: 50%;
+    margin: 30px 50px;
+    float: left;
+}
+
+.ui.input {
+    margin-bottom: 0;
+    width: 300px;
+}
+
+.ui.label.td {
+    width: 250px;
+}
+.ui.label.td:hover + .ui.label.delete{
+	opacity: 1;
+}
+.ui.label.delete {
+    opacity: 0;
+}
+.ui.label.delete:hover{
+	opacity: 1;
+}
+.ui.label>.delete.icon {
+    margin-left: 0;
+}
+
+#pw {
+    width: 50%;
+    float: right;
+}
+
+.ui.progress:last-child {
+    width: 300px;
+    margin-top: .5em;
+}
+.ui.progress .bar{
+	height: .2em;
+	transition: width .3s ease,background-color .3s ease;
+	width: 0;
+	min-width: 0;
+}
+.ui.progress.error .bar{
+	width: 33%;
+}
+.ui.progress.warning .bar{
+	width: 66%;
+}
+.ui.progress.success .bar{
+	width: 100%;
+}
