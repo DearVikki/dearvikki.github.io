@@ -34,6 +34,10 @@ var main = function() {
         $('img').each(function(){
             list.push($(this).attr('src'));
         })
+        $('.pop').each(function(){
+            list.push($(this).css('background-image').slice(4, -1).replace(/"/g, ""));
+        })
+         
     $.when(preloadImg(list, imgs)).done(function() {
         //预加载结束
         //warmup animation section
