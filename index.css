@@ -940,6 +940,7 @@ html, body {
     font-size: 10px;
     font-family: cursive;
     cursor: pointer;
+    cursor: pointer;
 }
 
 table {
@@ -1061,6 +1062,7 @@ td:hover .wrong {
     background: url(images/arrow-left.png);
     right: 15px;
     bottom: 7px;
+    cursor: pointer;
 }
 
 .wdw3-arrow-right {
@@ -1172,6 +1174,7 @@ ul.active {
     top: 277px;
     left: 145px;
     outline: none;
+    cursor: pointer;
 }
 
 .wdw2-start:active {
@@ -1371,10 +1374,10 @@ ul.active {
 
 @font-face {
     font-family: hellofont;
-    src: url(images/'hellofont.ttf');
+    src: url('hellofont.ttf');
 }
 
 @font-face {
     font-family: calamityJoe;
-    src: url(images/'calamityJoe.ttf');
+    src: url('calamityJoe.ttf');
 }

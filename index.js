@@ -50,28 +50,28 @@ var main = function() {
                         setTimeout(function() {
                             $('.doorBox .door').removeClass('active');
                             $('.mainBox').show();
-                        }, 2500)
-                        $('.wdw').each(function() {
-                            var $this = $(this),
-                                time = $this.data('wdwshow');
-                            ! function(time, $this) {
-                                setTimeout(function() {
-                                    $this.show()
+                            $('.wdw').each(function() {
+                                var $this = $(this),
+                                    time = $this.data('wdwshow');
+                                ! function(time, $this) {
                                     setTimeout(function() {
-                                        $this.removeClass('nowidth').removeClass('noheight');
+                                        $this.show()
                                         setTimeout(function() {
-                                            $this.find('.hide').removeClass('hide');
-                                        }, 1500)
-                                    }, 100)
-                                }, time)
-                            }(time, $this)
-                        })
-                        setTimeout(function() {
-                            $('.ad').show();
+                                            $this.removeClass('nowidth').removeClass('noheight');
+                                            setTimeout(function() {
+                                                $this.find('.hide').removeClass('hide');
+                                            }, 1500)
+                                        }, 100)
+                                    }, time)
+                                }(time, $this)
+                            })
                             setTimeout(function() {
-                                $('.ad').removeClass('bigsize');
-                            }, 500)
-                        }, 15000)
+                                $('.ad').show();
+                                setTimeout(function() {
+                                    $('.ad').removeClass('bigsize');
+                                }, 500)
+                            }, 12000)
+                        }, 8500)
                     }, 2000)
                 }, 1000)
             }, 500)
