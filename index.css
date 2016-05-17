@@ -1,0 +1,1380 @@
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #F7A6A0;
+    overflow-y:hidden;
+}
+
+.rbtBox {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 5px;
+    left: 0;
+}
+
+.rbtBox div {
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.rbtBox .word {
+    overflow: hidden;
+}
+
+.word img {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transition: all 1s cubic-bezier(.73, -0.07, .29, 1.43);
+}
+
+.word.active img {
+    top: 0;
+}
+
+.word.active.wordScale img {
+    animation: wordScale 1s steps(2) infinite alternate;
+}
+
+@keyframes wordScale {
+    to {
+        /*transform: scale(.95);*/
+        left: -200%;
+    }
+}
+
+.rbt {
+    width: 125px;
+    height: 75px;
+    background: url(images/hat.png);
+    left: calc(50% - 50px);
+    top: -700px;
+    transform: rotate(-40deg);
+    /*transition: all 1s cubic-bezier(.78, 0, 1, 1.2);*/
+}
+
+.rbt.hat {
+    top: 170px;
+    transform: rotate(0deg);
+    /*transition: all .5s;*/
+}
+
+.rbt.active {
+    top: 170px;
+    transform: rotate(0deg);
+    animation: hatShake .2s 5;
+    animation-delay: 1.4s;
+    transition: all 1.5s ease-out;
+}
+
+@keyframes hatShake {
+    from {
+        transform: rotate(-8deg);
+    }
+    to {
+        transform: rotate(8deg);
+    }
+}
+
+.rbt1 {
+    left: calc(50% - 55px);
+    top: -5px;
+    width: 125px;
+    height: 250px;
+    background: url(images/rabbit1.png);
+    animation: rbt1 3s steps(15);
+}
+
+@keyframes rbt1 {
+    to {
+        background-position: -1875px 0;
+    }
+}
+
+.rbt1Box {
+    /*width200px较合适 即原width400px*/
+    width: 80px;
+    height: 250px;
+    left: calc(50% + 190px);
+    top: 0px;
+    transition: left 5s;
+}
+
+.rbt1Box .pop {
+    width: 80px;
+    height: 150px;
+    left: 0;
+    bottom: 0;
+    background-position: 0px 10px;
+}
+
+.rbt1Box .pop.active {
+    background: url(images/rabbit1-popping.png);
+    animation: rbt1Pop .5s steps(3) infinite alternate;
+}
+
+@keyframes rbt1Pop {
+    to {
+        background-position: -240px 0px;
+    }
+}
+
+.rbt1Box .word {
+    width: 125px;
+    height: 80px;
+    left: -20px;
+    top: 20px;
+    overflow:
+}
+
+.rbt1Box .pop.popBack {
+    background: url(images/rabbit1-walking.png);
+    animation: popBack11 .3s steps(2);
+    animation-fill-mode: forwards;
+}
+
+.boxPopBack {
+    z-index: 2;
+    left: calc(50% + 430px) !important;
+}
+
+.rbt1Box.boxPopBack .pop.popBack {
+    background-position: -160px 0;
+    animation: popBack12 .5s 9;
+    animation-fill-mode: backwards;
+}
+
+@keyframes popBack11 {
+    to {
+        background-position: -160px 0px;
+    }
+}
+
+@keyframes popBack12 {
+    to {
+        bottom: 10px;
+    }
+}
+
+.rbt2 {
+    left: calc(50% - 130px);
+    top: 45px;
+    width: 190px;
+    height: 200px;
+    background: url(images/rabbit2.png);
+    animation: rbt2 2s steps(6);
+}
+
+@keyframes rbt2 {
+    to {
+        background-position: -1140px 0;
+    }
+}
+
+.rbt2Box {
+    width: 90px;
+    height: 200px;
+    left: calc(50% - 250px);
+    top: 50px;
+    transition: left 8s;
+}
+
+.rbt2Box .pop {
+    width: 90px;
+    height: 150px;
+    left: 0;
+    bottom: 0;
+}
+
+.rbt2Box .pop.active {
+    background: url(images/rabbit2-popping.png);
+    animation: rbt2Pop .5s steps(3) infinite alternate;
+}
+
+@keyframes rbt2Pop {
+    to {
+        background-position: -270px 0px;
+    }
+}
+
+.rbt2Box .word {
+    width: 125px;
+    height: 75px;
+    left: -25px;
+    top: 0px;
+}
+
+.word img {
+    left: 0;
+    animation: wordShake infinite;
+}
+
+@keyframes wordShake {
+    to {
+        transform: translateX(-125px);
+    }
+}
+
+.rbt2Box .pop.popBack {
+    background: url(images/rabbit2-walking.png);
+    animation: popBack21 .3s steps(2);
+    animation-fill-mode: forwards;
+}
+
+.rbt2Box.boxPopBack .pop.popBack {
+    background-position: -180px 0;
+    animation: popBack22 .5s 15;
+    animation-fill-mode: backwards;
+}
+
+@keyframes popBack21 {
+    to {
+        background-position: -180px 0px;
+    }
+}
+
+@keyframes popBack22 {
+    to {
+        bottom: 10px;
+    }
+}
+
+.rbt34 {
+    width: 225px;
+    height: 250px;
+    top: 0px;
+    left: calc(50% - 130px);
+    background: url(images/rabbit34.png);
+    background-position: 0 15px;
+    animation: rbt34 3s steps(13);
+}
+
+@keyframes rbt34 {
+    to {
+        background-position: -2925px 15px;
+    }
+}
+
+.rbt3Box, .rbt4Box {
+    width: 62px;
+    height: 150px;
+    left: calc(50% + 110px);
+    top: 100px;
+    transition: left 7.5s;
+}
+
+.rbt3Box .pop, .rbt4Box .pop {
+    width: 62px;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+}
+
+.rbt3Box .pop.active {
+    background: url(images/rabbit3-popping.png);
+    animation: rbt34Pop .5s steps(3) infinite alternate;
+}
+
+@keyframes rbt34Pop {
+    to {
+        background-position: -188px 0;
+    }
+}
+
+.rbt3Box .word {
+    width: 125px;
+    height: 75px;
+    left: -40px;
+    top: -15px;
+}
+
+.rbt3Box .pop.popBack {
+    background: url(images/rabbit3-walking.png);
+    animation: popBack341 .3s steps(2);
+    animation-fill-mode: forwards;
+}
+
+.rbt3Box.boxPopBack .pop.popBack {
+    background-position: -124px 0;
+    animation: popBack342 .5s 12;
+    animation-fill-mode: backwards;
+}
+
+@keyframes popBack341 {
+    to {
+        background-position: -124px 0px;
+    }
+}
+
+@keyframes popBack342 {
+    to {
+        bottom: 10px;
+    }
+}
+
+.rbt4Box {
+    left: calc(50% - 130px);
+}
+
+.rbt4Box .pop.active {
+    background: url(images/rabbit4-popping.png);
+    animation: rbt34Pop .5s steps(3) infinite alternate;
+}
+
+.rbt4Box .word {
+    width: 125px;
+    height: 65px;
+    left: -20px;
+    top: 10px;
+}
+
+.rbt4Box .pop.popBack {
+    background: url(images/rabbit4-walking.png);
+    animation: popBack341 .3s steps(2);
+    animation-fill-mode: forwards;
+}
+
+.rbt4Box.boxPopBack .pop.popBack {
+    background-position: -124px 0;
+    animation: popBack342 .5s 11;
+    animation-fill-mode: backwards;
+}
+
+.doorBox {
+    display: none;
+    left: calc(50% + 430px);
+    bottom: 0px;
+    width: 60px;
+    height: 40px;
+    border: 3px solid rgb(253, 254, 242);
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-perspective: 1000;
+    transition: all 1s;
+    z-index: 1;
+}
+
+.doorBox .door {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid rgb(253, 254, 242);
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 1s, transform 2s;
+}
+
+.door:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 23px;
+    top: 11px;
+    border-width: 10px 20px;
+    border-style: solid;
+    border-color: transparent;
+    border-left-color: rgb(253, 254, 242);
+    transition: all 1s;
+}
+
+.doorBox.active, .doorBox.active .door {
+    width: 50px;
+    height: 70px;
+    border-radius: 50px 50px 0 0;
+    border-bottom: none;
+    transform-origin: 99%;
+}
+
+.doorBox.active .door:before {
+    border: none;
+    left: 5px;
+    top: 32px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: rgb(253, 254, 242);
+}
+
+.doorBox.active .door.active {
+    transform: rotateY(170deg);
+    transform-origin: 99%;
+}
+
+.rbt.changeCar {
+    background: url(images/car-body.png);
+    transition: left 6s;
+}
+
+.rbt.changeCar.carActive {
+    left: -120px;
+}
+
+.rbt.changeCar:after, .rbt.changeCar:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: url(images/car-wheel1.png);
+    position: absolute;
+    left: 30px;
+    bottom: -5px;
+    animation: wheelRotate .9s infinite;
+}
+
+.rbt.changeCar:before {
+    background: url(images/car-wheel2.png);
+    left: 60px;
+}
+
+@keyframes wheelRotate {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.mainBox {
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    margin: 0 auto;
+    display: none;
+}
+
+.main {
+    width: 1000px;
+    height: 99%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.main div, .main img {
+    position: absolute;
+}
+
+.wdw {
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    /*transition: all .5s, width .5s cubic-bezier(.03, .08, .63, 1.19), height .5s;*/
+    transition: all .5s;
+    display: none;
+}
+
+.wdw1 {
+    width: 150px;
+    height: 250px;
+    left: 100px;
+    bottom: 500px;
+    background-color: #ffeb3b;
+}
+
+.detail {
+    display: none;
+}
+
+.origin, .detail {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: all 1s ease, top 1.5s, left 1.5s;
+}
+
+.wdw1-aboutme {
+    top: 20px;
+    left: 0px;
+}
+
+.wdw1-girl {
+    bottom: 0px;
+    left: 0px;
+}
+
+.wdw1:hover .wdw1-girl {
+    animation: wdw1Girl .5s steps(4);
+    animation-fill-mode: forwards;
+}
+
+@keyframes wdw1Girl {
+    to {
+        transform: translateX(-600px);
+    }
+}
+
+.wdw2 {
+    width: 250px;
+    height: 130px;
+    left: 300px;
+    bottom: 530px;
+    background-color: #51E3D5;
+}
+
+.wdw2-origin img:hover {
+    animation: wdw2 .5s steps(6);
+    animation-fill-mode: forwards;
+}
+
+@keyframes wdw2 {
+    to {
+        transform: translateX(-1500px);
+    }
+}
+
+.wdw3 {
+    width: 300px;
+    height: 200px;
+    left: 600px;
+    bottom: 500px;
+    background: #95DAB8;
+}
+
+.wdw3-skill {
+    display: none;
+}
+
+.wdw3-skill.active {
+    display: inline-block;
+    animation: skillPop .3s;
+}
+
+.wdw3-skill5 {
+    left: 20px;
+    top: 44px;
+}
+
+.wdw3-skill4 {
+    left: 70px;
+    top: 79px;
+}
+
+.wdw3-skill3 {
+    left: 120px;
+    top: 113px;
+}
+
+.wdw3-skill2 {
+    left: 160px;
+    top: 143px;
+}
+
+.wdw3-skill1 {
+    left: 200px;
+    top: 173px;
+}
+
+@keyframes skillPop {
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.wdw3-rbt {
+    left: 230px;
+    top: 110px;
+    transition: all .5s ease-out;
+}
+
+.wdw3-rbt.pop {
+    animation: wdw3Rbt 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes wdw3Rbt {
+    13% {
+        left: 200px;
+        top: 60px;
+    }
+    20% {
+        left: 190px;
+        top: 70px;
+    }
+    33% {
+        left: 170px;
+        top: 28px;
+    }
+    40% {
+        left: 160px;
+        top: 38px;
+    }
+    53% {
+        left: 130px;
+        top: -3px;
+    }
+    60% {
+        left: 120px;
+        top: 7px;
+    }
+    73% {
+        left: 80px;
+        top: -35px;
+    }
+    80% {
+        left: 70px;
+        top: -25px;
+    }
+    93% {
+        left: 30px;
+        top: -75px;
+    }
+    100% {
+        left: 20px;
+        top: -65px;
+    }
+}
+
+.wdw3-rbt.fly0 {
+    left: 20px;
+    top: -65px;
+    transition: top .1s;
+}
+
+.wdw3-rbt.fly1 {
+    left: 20px;
+    top: -100px;
+}
+
+.wdw3-rbt.fly2 {
+    left: 230px;
+    top: -100px;
+    transition: top .1s;
+}
+
+.wdw4 {
+    width: 100px;
+    height: 130px;
+    left: 740px;
+    bottom: 230px;
+    background: #F4A93A;
+}
+
+.wdw4-origin {
+    top: -120px;
+}
+
+.wdw56 {
+    width: 220px;
+    height: 132px;
+    left: 270px;
+    bottom: 230px;
+    border: none;
+}
+
+.wdw56-origin {
+    -webkit-mask-image: url(images/wdw56-mask.png);
+    background: linear-gradient( 90deg, #58a 50%, #EF7BA2 50%);
+}
+
+.wdw56-man {
+    bottom: 0px;
+    left: -5px;
+    transition: left 2s linear, bottom 1.5s;
+}
+
+.wdw56-man.active {
+    left: 115px;
+}
+
+.wdw56-woman {
+    bottom: 0px;
+    left: 170px;
+    transition: left 2s linear, bottom 1.5s;
+}
+
+.wdw56-woman.active {
+    left: 50px;
+}
+
+.wdw56-windowBar1, .wdw56-windowBar2 {
+    width: 100px;
+    height: 130px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background: url(images/wdw6-bar-draft.png);
+}
+
+.wdw56-windowBar2 {
+    right: 0;
+    bottom: 0;
+}
+
+.wdw56-heart {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 0px;
+    overflow: hidden;
+    display: none;
+}
+
+.wdw56-heart.left {
+    left: 40px;
+}
+
+.wdw56-heart.right {
+    left: 160px;
+}
+
+.wdw56-heart img {
+    left: 0px;
+    top: 20px;
+    animation: wdw56Heart 3s infinite;
+}
+
+@keyframes wdw56Heart {
+    to {
+        top: -40px;
+    }
+}
+
+.wdw7 {
+    width: 200px;
+    height: 130px;
+    left: 520px;
+    bottom: 230px;
+    background-color: #9AD7E9;
+}
+
+.wdw7-snowman {
+    left: 0px;
+    bottom: 0px;
+}
+
+.wdw7-hot {
+    left: -20px;
+    top: 0px;
+}
+
+.wdw7-eat {
+    left: 40px;
+    top: 10px;
+}
+
+.wdw7-great {
+    left: 30px;
+    top: 0px;
+    display: none;
+}
+
+.wdw7-wind {
+    left: 95px;
+    bottom: 30px;
+    display: none;
+}
+
+.wdw7-fan-part1 {
+    right: -10px;
+    bottom: 10px;
+}
+
+.wdw7-fan-part2 {
+    width: 10px;
+    height: 16px;
+    bottom: 0px;
+    right: 20px;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+}
+
+.wdw7-fan-part1:hover {
+    animation: wdw7Fan .5s infinite linear;
+}
+
+@keyframes wdw7Fan {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.ad {
+    left: -10px;
+    bottom: 200px;
+    -webkit-perspective: 1000;
+    width: 200px;
+    height: 150px;
+    display: none;
+    transform-origin: top center;
+    animation: adSway 2s;
+}
+
+@keyframes adSway {
+    20% {
+        transform: rotate(-8deg);
+    }
+    40% {
+        transform: rotate(6deg);
+    }
+    60% {
+        transform: rotate(-4deg);
+    }
+    80% {
+        transform: rotate(2deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.ad-flip {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.6s;
+    background: #F14E42;
+}
+
+.ad-string {
+    top: -104px;
+    left: 60px;
+}
+
+.triangle1, .triangle2 {
+    border-style: solid;
+    border-width: 52px 40px;
+    border-color: transparent;
+    border-bottom-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.triangle2 {
+    border-width: 49px 35px;
+    border-bottom-color: #F7A6A0;
+    top: 5px;
+    left: 5px;
+}
+
+.ad:hover .ad-flip {
+    transform: rotateY(-180deg);
+}
+
+.ad-front, .ad-back {
+    backface-visibility: hidden;
+    width: 200px;
+    height: 150px;
+    left: 0;
+    bottom: 0px;
+    text-align: center;
+}
+
+.ad-front {
+    z-index: 2;
+}
+
+.ad-flip p {
+    transform: scaleY(1.5);
+    font-family: Arial;
+    font-size: 45px;
+    letter-spacing: -5px;
+    color: white;
+    margin: 20px 0 15px 0;
+}
+
+.ad-front div {
+    width: 160px;
+    height: 50px;
+    left: 20px;
+    border-radius: 5px;
+}
+
+.ad-flip img {
+    left: 0px;
+}
+
+.ad-back {
+    transform: rotateY(-180deg);
+}
+
+.ad-back p {
+    font-size: 25px;
+    letter-spacing: -2px;
+    margin-left: -65px;
+}
+
+.ad-back div {
+    width: 160px;
+    height: 80px;
+    top: 55px;
+    left: 20px;
+    border-radius: 5px;
+}
+
+.wdw1-detail {
+    padding-top: 20px;
+    background-color: ivory;
+}
+
+.wdw1.shuffle1 {
+    width: 700px;
+    height: 450px;
+    left: 100px;
+    bottom: 300px;
+    z-index: 5;
+    transition: all .5s;
+}
+
+.wdw1.detailShow .wdw1-origin {
+    display: none;
+}
+
+.wdw1.detailShow .wdw1-detail {
+    display: block;
+}
+
+.detail .detail-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    z-index: 6;
+    text-align: center;
+    font-size: 10px;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+table {
+    font-family: hellofont;
+    background: #4493AF;
+    border-radius: 5px;
+    color: ivory;
+}
+
+td, th {
+    padding-left: 5px;
+    height: 40px;
+}
+
+td .right, td .wrong {
+    margin-left: 10px;
+    transition: all .5s;
+}
+
+td:hover .right {
+    transform: scale(1.2);
+}
+
+.wdw1-profile {
+    width: 90px;
+    height: 100px;
+    position: relative;
+    padding: 0;
+    background: #7DE1EE;
+    overflow: hidden;
+    background-image: url(images/wdw1-detail-profile.png);
+}
+
+.wdw1-profile:hover img{
+    animation: sakuraFalling 12s infinite linear;
+}
+
+@keyframes sakuraFalling {
+    to {
+        transform:translateY(180px);
+    }
+}
+
+td:hover .wrong {
+    opacity: 0;
+}
+
+.wdw2.shuffle1 {
+    left: 770px;
+    bottom: 450px;
+    transform: scale(0.65, 0.9);
+}
+
+.wdw3.shuffle1 {
+    left: 700px;
+    bottom: 100px;
+    transform: scale(0.7, 0.8);
+}
+
+.wdw4.shuffle1 {
+    left: 850px;
+    bottom: 310px;
+}
+
+.wdw56.shuffle1, .wdw7.shuffle1 {
+    bottom: 150px;
+}
+
+.wdw3.shuffle3 {
+    width: 330px;
+    height: 320px;
+    left: 520px;
+    bottom: 380px;
+    background-color: ivory;
+    z-index: 5;
+}
+
+.wdw3.detailShow .wdw3-origin {
+    display: none;
+}
+
+.wdw3.detailShow .wdw3-detail {
+    display: block;
+    overflow: hidden;
+}
+
+.wdw3-detail-pages {
+    width: 1500px;
+    height: 270px;
+    top: 0px;
+    left: 0;
+    transition: all .5s;
+}
+
+.wdw3-detail-page {
+    width: 330px;
+    height: 270px;
+    float: left;
+    position: relative !important;
+    text-align: center;
+    background: #F56F84;
+}
+
+.wdw3-detail-word {
+    width: 330px;
+    height: 40px;
+    left: 50px;
+    border: 1px solid black;
+}
+
+.wdw3-detail-page img {
+    top: 0;
+    left: 0;
+}
+
+.wdw3-arrow-left, .wdw3-arrow-right {
+    width: 50px;
+    height: 40px;
+    background: url(images/arrow-left.png);
+    right: 15px;
+    bottom: 7px;
+}
+
+.wdw3-arrow-right {
+    background: url(images/arrow-right.png);
+    left: 15px;
+    bottom: 4px;
+    display: none;
+}
+
+.wdw3-arrow-left:hover, .wdw3-arrow-right:hover {
+    animation: wdw3Arrow .3s infinite;
+}
+
+@keyframes wdw3Arrow {
+    to {
+        transform: translateY(1.5px) scale(.97);
+    }
+}
+
+.wdw1.shuffle3 {
+    transform: scale(.8);
+    left: 350px;
+    bottom: 500px;
+}
+
+.wdw2.shuffle3 {
+    transform: scale(.85);
+    bottom: 380px;
+    left: 260px;
+}
+
+.wdw2.shuffle2 {
+    width: 330px;
+    height: 300px;
+    bottom: 400px;
+}
+
+.wdw2.detailShow .wdw2-origin {
+    display: none;
+}
+
+.wdw2.detailShow .wdw2-detail {
+    display: block;
+    background: ivory;
+}
+
+.wdw2-detail-title {
+    width: 260px;
+    height: 50px;
+    top: 10px;
+    left: 25px;
+}
+
+.wdw2-detail-title p {
+    font-family: calamityJoe;
+    font-size: 27px;
+    position: absolute;
+    top: 8px;
+    left: 30px;
+}
+
+.wdw2-detail-main {
+    width: 300px;
+    height: 180px;
+    position: relative !important;
+    margin: 90px auto;
+}
+
+.wdw2-m {
+    display: inline-block;
+    width: 70px;
+    height: 180px;
+    border-radius: 5px;
+    background: #E7B8B8;
+    overflow: hidden;
+    position: relative !important;
+    margin-left: 15px;
+}
+
+.wdw2-m ul {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: -120px;
+    transition: top .5s linear;
+}
+
+ul.active0 {
+    top: -120px;
+}
+
+ul.active {
+    top: 180px;
+}
+
+.wdw2-m li {
+    display: block;
+    width: 70px;
+    height: 60px;
+}
+
+.wdw2-start {
+    width: 30px;
+    height: 15px;
+    border-radius: 30px;
+    border: 2px solid #ED67B0;
+    background: #E7B8B8;
+    position: absolute;
+    top: 277px;
+    left: 145px;
+    outline: none;
+}
+
+.wdw2-start:active {
+    background: #C88383;
+}
+
+.wdw1.shuffle2 {
+    transform: scale(.9, .8);
+    bottom: 150px;
+    left: 290px;
+}
+
+.wdw3.shuffle2 {
+    transform: scale(.8, .9);
+    left: 630px;
+    bottom: 510px;
+}
+
+.wdw4.shuffle2 {
+    left: 750px;
+    bottom: 365px;
+    transform: scale(1.1);
+}
+
+.wdw56.shuffle2 {
+    bottom: 210px;
+    left: 470px;
+}
+
+.wdw7.shuffle2 {
+    left: 720px;
+    bottom: 210px;
+}
+
+.nowidth {
+    width: 0;
+}
+
+.noheight {
+    height: 0;
+}
+
+.wdw1.nowidth {
+    left: 175px;
+}
+
+.wdw2.nowidth {
+    left: 425px;
+}
+
+.wdw3.noheight {
+    bottom: 600px;
+}
+
+.wdw4.nowidth {
+    left: 790px;
+}
+
+.wdw56.noheight {
+    bottom: 340px;
+}
+
+.wdw7.noheight {
+    bottom: 295px;
+}
+
+.ad.bigsize {
+    transform: rotate(10deg);
+    animation: none;
+}
+
+.wdw1-origin.hide {
+    top: -100%;
+}
+
+.wdw2-origin.hide {
+    top: -100%;
+}
+
+.wdw3-origin.hide {
+    left: -100%;
+}
+
+.wdw4-origin.hide {
+    top: 0;
+}
+
+.wdw56-origin .hide {
+    bottom: -110px;
+}
+
+.wdw7-origin.hide {
+    left: -100%;
+}
+
+.cloudBox {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+    top: 5px;
+    left: 0;
+    background-color: gray;
+    display: none;
+}
+
+.cloudBox div {
+    position: absolute;
+}
+
+.cloud {
+    background-color: pink;
+    left: -20px;
+    top: 10px;
+    transition: left .05s;
+    animation: cloudFloating infinite linear;
+}
+
+@keyframes cloudFloating {
+    to {
+        left: 100%
+    }
+}
+
+.cloud1 {
+    width: 160px;
+    height: 120px;
+    animation-duration: 80s;
+}
+
+.cloud2 {
+    width: 240px;
+    height: 80px;
+    animation-delay: 5s;
+    animation-duration: 100s;
+}
+
+@media screen and (max-height: 800px) {
+    .wdw1, .wdw2, .wdw3 {
+        transform: translate(0, 80px);
+    }
+    .wdw1.shuffle1 {
+        transform: translate(-30px, 50px);
+    }
+    .wdw2.shuffle1 {
+        transform: scale(0.65, 0.9) translate(0, 20px);
+    }
+    .wdw3.shuffle1 {
+        transform: scale(0.7, 0.8) translate(-50px, 50px);
+    }
+    .wdw4.shuffle1 {
+        transform: translate(-20px, 40px);
+    }
+    .wdw56.shuffle1, .wdw7.shuffle1 {
+        transform: translate(-50px, 50px);
+    }
+    .wdw1.shuffle2 {
+        transform: scale(.9, .8) translate(0, 70px);
+    }
+    .wdw2.shuffle2, .wdw56.shuffle2, .wdw7.shuffle2 {
+        transform: translate(0, 70px);
+    }
+    .wdw3.shuffle2 {
+        transform: scale(.8, .9) translate(0, 80px);
+    }
+    .wdw4.shuffle2 {
+        transform: scale(1.1) translate(0, 65px);
+    }
+    .wdw1.shuffle3 {
+        transform: scale(.8) translate(0, 70px);
+    }
+    .wdw2.shuffle3 {
+        transform: scale(.85) translate(0, 60px);
+    }
+    .wdw3.shuffle3, .wdw4.shuffle3, .wdw56.shuffle3, .wdw7.shuffle3 {
+        transform: translate(0, 60px);
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .wdw1, .wdw2, .wdw3 {
+        transform: translate(0, 120px);
+    }
+    .wdw4, .wdw56, .wdw7, .ad {
+        transform: translate(0, 50px);
+    }
+}
+
+@media screen and (max-height: 620px) {
+    .wdw1, .wdw2, .wdw3 {
+        transform: translate(0, 210px);
+    }
+    .wdw4, .wdw56, .wdw7, .ad {
+        transform: translate(0, 110px);
+    }
+}
+
+@font-face {
+    font-family: hellofont;
+    src: url(images/'hellofont.ttf');
+}
+
+@font-face {
+    font-family: calamityJoe;
+    src: url(images/'calamityJoe.ttf');
+}
