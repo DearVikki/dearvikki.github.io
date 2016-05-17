@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            vikkiMagnifier
+        </title>
+        <link rel="stylesheet" type="text/css" href="index.css" />
+    </script>
+</head>
+<body>
+    <h3>
+        #小插件 淘宝款图片放大镜
+    </h3>
+    <div>
+        <img src="small.jpg" data-src="big.jpg"/>
+    </div>
+    <h3>
+        #也可以自己试一试哟
+    </h3>
+    <div>
+        <label>
+            请选择一张小图像：
+        </label>
+        <input type="file" id="smallFile" />
+    </div>
+    <div>
+        <label>
+            请选择这张图像的加大版：
+        </label>
+        <input type="file" id="bigFile" />
+    </div>
+    噔噔噔~
+    <button>
+        点击我
+    </button>
+    查看效果把！
+    <div id="result">
+    </div>
+    <h3>
+        #点击
+        <button>
+            <a href="vikkiMagnifier.js" target="_self" style="text-decoration: none">
+                这里
+            </a>
+        </button>
+        可以把vikkiMagnifier插件带回家！~
+    </h3>
+    <p>
+        调用步骤如下~
+    </p>
+    <pre>
+        step①: &lt;div style="position: relative"&gt; &lt;img src="小图片.jpg" data-src="大图片.jpg"/ &gt; &lt;/div&gt;
+    </pre>
+    <pre>
+        step②: 然后再$('div').vikkiMagnifier()就好咯!
+    </pre>
+    <p>
+        ps:但是我还没写好注释…所以还是先别下喔嘿嘿！~
+    </p>
+    <p>
+        pps:对 不是网络问题！这个页面就是没有css哈哈哈(・ω<)...
+    </p>
+</p>
+</body>
+<script src="jquery.js">
+</script>
+<script src="index.js">
+</script>
+<script src="vikkiMagnifier.js">
+</script>
+</html>
