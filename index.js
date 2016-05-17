@@ -1,27 +1,65 @@
 var main = function() {
-    //warmup animation section
-    setTimeout(function() {
-        $('.rbt').addClass('active')
-    }, 500)
-    $('.rbtBox').on('webkitAnimationEnd', '.rbt', function() {
-        $('.rbt').removeClass('rbt').addClass('rbt1');
-    })
-    $('.rbtBox').on('webkitAnimationEnd', '.rbt1', function() {
-        $('.rbt1').addClass('rbt2').removeClass('rbt1');
-        $('.rbt1Box .pop').addClass('active');
-    })
-    $('.rbtBox').on('webkitAnimationEnd', '.rbt2', function() {
-        $('.rbt2').addClass('rbt34').removeClass('rbt2');
-        $('.rbt2Box .pop').addClass('active');
-    })
-    $('.rbtBox').on('webkitAnimationEnd', '.rbt34', function() {
+    function preloadImg(list, imgs) {
+        var def = $.Deferred(),
+            len = list.length;
+        $(list).each(function(i, e) {
+            var img = new Image();
+            img.src = e;
+            if (img.complete) {
+                imgs[i] = img;
+                len--;
+                if (len == 0) {
+                    def.resolve();
+                }
+            } else {
+                img.onload = (function(j) {
+                    return function() {
+                        imgs[j] = img
+                        len--;
+                        if (len == 0) {
+                            def.resolve();
+                        }
+                    };
+                })(i);
+                img.onerror = function() {
+                    len--;
+                    console.log('fail to load image');
+                };
+            }
+        });
+        return def.promise();
+    }
+    var list = []
+        imgs = [];
+        $('img').each(function(){
+            list.push($(this).attr('src'));
+        })
+    $.when(preloadImg(list, imgs)).done(function() {
+        //预加载结束
+        //warmup animation section
+        setTimeout(function() {
+            $('.rbt').addClass('active')
+        }, 500)
+        $('.rbtBox').on('webkitAnimationEnd', '.rbt', function() {
+            $('.rbt').removeClass('rbt').addClass('rbt1');
+        })
+        $('.rbtBox').on('webkitAnimationEnd', '.rbt1', function() {
+            $('.rbt1').addClass('rbt2').removeClass('rbt1');
+            $('.rbt1Box .pop').addClass('active');
+        })
+        $('.rbtBox').on('webkitAnimationEnd', '.rbt2', function() {
+            $('.rbt2').addClass('rbt34').removeClass('rbt2');
+            $('.rbt2Box .pop').addClass('active');
+        })
+        $('.rbtBox').on('webkitAnimationEnd', '.rbt34', function() {
             $('.rbt34').removeClass('rbt34 active').addClass('rbt hat');
             $('.rbt3Box .pop,.rbt4Box .pop').addClass('active');
             setTimeout(function() {
                 greetingShow();
             }, 800)
         })
-        //words appear
+    });
+    //words appear
     var greetingShow = function() {
             $('.rbt2Box .word').addClass('active');
             setTimeout(function() {
