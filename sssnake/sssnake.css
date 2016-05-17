@@ -1,0 +1,182 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+
+#main {
+    width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+p {
+    font-family: courier;
+    font-size: 60px;
+    line-height: 180px;
+    margin: 0 30px;
+}
+
+#container {
+    display: block;
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    border: 3px solid black;
+}
+
+.snake {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 5%;
+    border: 1px solid white;
+    background-image: none;
+    background-color: black;
+}
+
+.snake p {
+    margin: -10px -4px;
+    line-height: 20px;
+    height: 20px;
+    font-size: 40px;
+    color: white;
+}
+
+.snakeWord {
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    background: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR1Jd5Pw7sF-Yw_LLZtR_4WtXaaA2G_cTpi6af5tcdZMQvUZJSY) no-repeat 0 0;
+    background-size: 78px 55px;
+}
+
+.snakeWord p {
+    font-family: Courier;
+    margin: 10px auto;
+    line-height: 40px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    ;
+}
+
+.food {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+#fail1 {
+    display: none;
+    margin: 0 auto;
+    width: 1000px;
+    height: 180px;
+    border: 2px solid black;
+}
+
+#fail1 p {
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100px;
+    margin-top: 95px;
+}
+
+#fail2 {
+    display: none;
+    margin: 0 auto;
+    width: 1000px;
+    height: 180px;
+    border: 2px solid black;
+    background-color: black;
+}
+
+#fail2 p {
+    color: white;
+}
+
+#mode {
+    display: none;
+    position: absolute;
+    top: 30px;
+    width: 1000px;
+    height: 70px;
+}
+
+#mode p {
+    text-align: center;
+    color: white;
+    line-height: 70px;
+    font-size: 50px;
+}
+
+#right-container {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 250px;
+    height: 600px;
+}
+#right-container div{
+	margin:0 auto;
+	text-align: center;
+}
+#right-container p {
+    font-size: 20px;
+    margin: 0 auto;
+    line-height: 150%;
+    margin-left: 60px;
+    font-weight: bold;
+}
+
+#score {
+    font-size: 80px;
+    margin-left: 110px;
+    margin-top: 70px;
+    font-family: courier;
+}
+
+#time {
+    font-size: 70px;
+    margin: 20px 50px;
+    font-family: courier;
+    font-size: courier;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+#pause,#replay{
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	border:3px solid black;
+	border-radius: 5px;
+	display: inline-block;
+	left: 0px;
+	bottom: 0px;
+}
+#pause:before{
+	content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 3px;
+	border-color: transparent black;
+	width:10px;
+	height: 20px;
+    top: 4px;
+    left: 10px;
+}
+#pause.active:before{
+	border: 13px solid transparent;
+    border-width: 13px 23px;
+    border-left-color: black;
+	width: 0;
+	height: 0;
+	left: 8px;
+}
+#replay{
+	background: url(replay.png) no-repeat center;
+	background-size: 85%;
+	left: 50px;
+}

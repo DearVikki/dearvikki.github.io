@@ -1,0 +1,154 @@
+  .row, .btn {
+      font-weight: bold;
+  }
+  
+  .nav.nav-tabs {
+      width: 400px;
+  }
+
+  .tab-pane{
+    height:460px;
+    position: relative;
+  }
+  #prizeTab{
+    height: 475px;
+  }
+  
+  .input-group, #punishment {
+      width: 400px;
+  }
+  
+  .radio {
+      margin-left: 20px;
+  }
+  
+  .todoList {
+      position: relative;
+  }
+  
+  .list-group-item {
+      width: 400px;
+      height: 34px;
+      line-height: 13px;
+  }
+  
+  .glyphicon-unchecked {
+      float: left;
+      margin-right: 5px;
+  }
+  
+  .glyphicon-unchecked.blue {
+      color: blue;
+  }
+  
+  .glyphicon-unchecked.blueAll {
+      background-color: blue;
+  }
+  
+  .glyphicon-unchecked.green {
+      color: green;
+  }
+  
+  .glyphicon-unchecked.greenAll {
+      background-color: green;
+  }
+  
+  .glyphicon-unchecked.yellow {
+      color: yellow;
+  }
+  
+  .glyphicon-unchecked.yellowAll {
+      background-color: yellow;
+  }
+  
+  .glyphicon-unchecked.orange {
+      color: orange;
+  }
+  
+  .glyphicon-unchecked.orangeAll {
+      background-color: orange;
+  }
+  
+  .glyphicon-unchecked.red {
+      color: red;
+  }
+  
+  .glyphicon-unchecked.redAll {
+      background-color: red;
+  }
+  
+  .edit, .remove {
+      float: right;
+      color: #aaaaaa;
+      margin-left: 5px;
+      display: none;
+  }
+  
+  .todo:hover .edit, .todo:hover .remove {
+      display: inline-block;
+  }
+  
+  #editDiv {
+      position: absolute;
+  }
+  
+  .dhc {
+      float: left;
+      margin-right: 5px;
+  }
+  
+  .glyphicon-unchecked, .glyphicon-remove, .glyphicon-pencil, .glyphicon-trash {
+      top: -2px;
+      cursor: pointer;
+  }
+  
+  #acceptPunishment {
+      float: right;
+      margin-bottom: -5px;
+  }
+  
+  #punishment {
+      margin: 150px auto;
+  }
+  
+  #shadow {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: rgba(1, 1, 1, 0.5);
+      top: 0;
+      left: 0;
+      border-radius: 5px;
+      z-index: 10;
+  }
+  
+  #doneList {
+      color: #aaaaaa;
+      margin-top: 15px;
+  }
+  
+  .doneListItem {
+      width: 395px;
+  }
+  
+  .time {
+      padding-left: 10px;
+      font-weight: normal;
+  }
+  
+  .removeForever {
+      float: right;
+      display: none;
+  }
+  
+  .doneListItem:hover .removeForever {
+      display: inline-block;
+  }
+
+  .footer{
+    position: absolute;
+    bottom: 20px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    height: 20px;
+  }

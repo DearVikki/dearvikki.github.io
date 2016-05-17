@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link id="theme" type="text/css" rel="stylesheet" href="sssnake.css"/>
+        <title>
+            sssnake
+        </title>
+    </head>
+    <body>
+        <div id="main">
+            <div id="container">
+                <div id="mode">
+                    <p>
+                        Frozen Mode
+                    </p>
+                </div>
+                <div id="fail1">
+                    <p>
+                        Ooops
+                    </p>
+                </div>
+                <div id="fail2">
+                    <p>
+                        You are...
+                    </p>
+                </div>
+            </div>
+            <div id="right-container">
+                <div id="score">
+                    0.
+                </div>
+                <div id="time">
+                    01:00
+                </div>
+                <p>
+                    <span style="color:blue">
+                        o
+                    </span>
+                    : speed/2
+                </p>
+                <p>
+                    <span style="color:red">
+                        o
+                    </span>
+                    : speed*3
+                </p>
+                <p>
+                    <span style="color:orange">
+                        o
+                    </span>
+                    : credit*3
+                </p>
+                <p>
+                    <span style="color:pink">
+                        o
+                    </span>
+                    : credit*5
+                </p>
+                <p>
+                    <span style="color:black">
+                        o
+                    </span>
+                    : credit/2 & speed*4
+                </p>
+                <div id="pause" data-pause="run"></div>
+                <div id="replay"></div>
+            </div>
+        </div>
+    </body>
+    <script src="jquery.js">
+    </script>
+    <script src="sssnake.js">
+    </script>
+</html>

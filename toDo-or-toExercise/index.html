@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            trial
+        </title>
+        <meta charset="utf-8"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet"/>
+        <link href="index.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="container"  id="content">
+            <div class="row">
+                <div class=" col-md-offset-3" style="padding:20px 10px;width:420px;position: relative">
+                    <!-- 所有的nav -->
+                    <ul class="nav nav-tabs">
+                        <li class="navList active">
+                            <a href="#" data-toggle="tab">
+                                To-do
+                                <span class="badge">
+                                    {{lists.length}}
+                                </span>
+                            </a>
+                        </li>
+                        <li class="navList" style="float:right">
+                            <a href="#" data-toggle="tab">
+                                History
+                            </a>
+                        </li>
+                        <li class="navList" style="float:right">
+                            <a href="#" data-toggle="tab">
+                                Prize
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- 主面板 -->
+                        <div class="tab-pane fade in active" >
+                            <!-- 起步：添加to-do list -->
+                            <div class="form-group" style="margin-top:15px;">
+                                <!-- to-do list输入框 -->
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Type here..." name="checkList" v-model="list.name"/>
+                                    <span class="input-group-btn">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn btn-primary dropdown-toggle" id="preAdd" data-toggle="dropdown" v-bind:class="{'disabled':list.name == ''}" style="height:34px">
+                                                <span class='glyphicon glyphicon-plus' title='Add'>
+                                                </span>
+                                            </button>
+                                            <ul class="dropdown-menu"  id="#credit" style="min-width:400px;text-align:center;left:-360px">
+                                                <li class="dropdown-header" style="font-size:15px;padding:0px">
+                                                    Task-level:
+                                                </li>
+                                                <li class="divider">
+                                                </li>
+                                                <li style="display:inline-block;padding-right:5px">
+                                                    <label for="name">
+                                                        <input type="radio" name="submitCredit" value="1" checked="false" v-model="picked"/>
+                                                        1
+                                                    </label>
+                                                </li>
+                                                <li style="display:inline-block;padding-right:5px">
+                                                    <label for="name">
+                                                        <input type="radio" name="submitCredit" value="2" checked="false" v-model="picked"/>
+                                                        2
+                                                    </label>
+                                                </li>
+                                                <li style="display:inline-block;padding-right:5px">
+                                                    <label for="name">
+                                                        <input type="radio" name="submitCredit" value="3" checked="false" v-model="picked"/>
+                                                        3
+                                                    </label>
+                                                </li>
+                                                <li style="display:inline-block;padding-right:5px">
+                                                    <label for="name">
+                                                        <input type="radio" name="submitCredit" value="4" checked="false" v-model="picked"/>
+                                                        4
+                                                    </label>
+                                                </li>
+                                                <li style="display:inline-block;padding-right:5px">
+                                                    <label for="name">
+                                                        <input type="radio" name="submitCredit" value="5" checked="false"  v-model="picked"/>
+                                                        5
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-default" id="submit" v-on:click="addList(picked)">
+                                                        Add
+                                                    </button>
+                                                    <!-- 自动列表就关上了？ -->
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- to-do list的列表 -->
+                            <ul class="list-group todoList">
+                                <li class="list-group-item todo" v-for="list in lists">
+                                    <span class='wqq glyphicon glyphicon-unchecked' v-bind:class="{'blue':list.color==1, 'green':list.color==2, 'yellow':list.color==3, 'orange':list.color==4, 'red':list.color==5, 'blueAll':list.color==1 && list.compelete == true, 'greenAll':list.color==2 && list.compelete == true, 'yellowAll':list.color==3 && list.compelete == true, 'orangeAll':list.color==4 && list.compelete == true, 'redAll':list.color==5 && list.compelete == true}" v-on:click="compeleteList(list)">
+                                    </span>
+                                    <span>
+                                        {{list.name}}
+                                    </span>
+                                    <span class='remove glyphicon glyphicon-remove' title='quit' v-on:click="removeList(list)">
+                                    </span>
+                                    <span class='edit glyphicon glyphicon-pencil' title='edit' v-on:click="editList(list)">
+                                    </span>
+                                </li>
+                                <!-- 修改to-do list -->
+                                <div class="input-group" id="editDiv" v-show="state.editDiv == true">
+                                    <input type="text" class="form-control" name="editWindow" style="width:338px" v-model="computedLi">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-primary" id="editDone" v-on:click="editDone()">
+                                            Done
+                                        </button>
+                                    </span>
+                                </div>
+                            </ul>
+                            <div class="footer"></div>
+                        </div>
+                        <!-- 历史面板 -->
+                        <div class="tab-pane fade" id="doneTab">
+                            <ul class="list-group" id="doneList"  >
+                                <li class='list-group-item doneListItem' v-for="doneList in doneLists">
+                                    <span class='time'>
+                                    </span>
+                                    <span>
+                                        {{doneList.name}}
+                                    </span>
+                                    <span class='removeForever glyphicon glyphicon-trash' title='Delete forever' v-on:click="removeForever(doneList)">
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="footer"></div>
+                        </div>
+                        <!-- 积分面板 -->
+                        <div class="tab-pane fade" id="prizeTab" style="width:400px">
+                            <!-- 大标题 -->
+                            <div class="panel panel-default" id="prize">
+                                <div class="panel-heading">
+                                    <h3>
+                                        Credits for Prizes
+                                    </h3>
+                                </div>
+                            </div>
+                            <!-- 兑换奖励处 -->
+                            <div class="panel-body" id="creditsForPrize">
+                                <p>
+                                    Your credits total
+                                    <span id="creditAmount" style="font-size:50px">
+                                        {{credits.amount}}
+                                    </span>
+                                    .
+                                </p>
+                                <p>
+                                    Get yourself a special treatment!
+                                    <span class="glyphicon glyphicon-glass">
+                                    </span>
+                                </p>
+                                <div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-gift">
+                                            </span>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Input the prize to get yourself here." name="prizeKind" v-model="credits.prize">
+                                    </div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-gbp">
+                                            </span>
+                                        </span>
+                                        <input type="text" class="form-control" placeholder="Input the amount of credits to spend here. Eg.5" name="creditSpend" v-model="credits.spend"/>
+                                    </div>
+                                    <button class="btn btn-default" id="confirmPrize" style="float:right;margin-top:20px" v-on:click="confirmPrize()">
+                                        OK
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- 分值不够，弹出警告框 -->
+                            <!-- button里不写data-dismiss="alert" -->
+                            <div class="alert alert-warning alert-dismissable" v-show="state.prizeAlert == true">
+                                {{state.prizeAlertText}}
+                                <button type="button" class="close" v-on:click="closePrizeAlert()">
+                                    &times;
+                                </button>
+                            </div>
+                            <div class="footer">
+                                <p style="color:#777;cursor:pointer">view all prize</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="shadow" v-show="state.shadow == true">
+                        <!-- 移除to-do list并接受惩罚 -->
+                        <div class="panel panel-default" id="punishment" v-show="state.punishment == true">
+                            <div>
+                                <div class="panel-heading">
+                                    <button class="close" id="closePunishment" style="float:right" title="Better to compelete." v-on:click="closeRemove()">
+                                        &times;
+                                    </button>
+                                    <p style="margin:10px 30px 0px 20px">
+                                        Well..to give up this task, you should take exercise-punishment!!
+                                    </p>
+                                </div>
+                                <div class="panel-body" id="exerciseList">
+                                    <h4 id="punishList" style="margin:0px 20px">
+                                        <template v-if="removeListColor==1">
+                                            <span class='dhc glyphicon glyphicon-unchecked' style='color:blue' title='No problem.' v-on:click="doExercise()">
+                                            </span>
+                                            30 squats
+                                        </template>
+                                        <template v-if="removeListColor==2">
+                                            <span class='dhc glyphicon glyphicon-unchecked' style='color:green' title='No problem.' v-on:click="doExercise()">
+                                            </span>
+                                            50 sit-ups
+                                        </template>
+                                        <template v-if="removeListColor==3">
+                                            <span class='dhc glyphicon glyphicon-unchecked' style='color:yellow' title='No problem.' v-on:click="doExercise()">
+                                            </span>
+                                            Ab Ripper X
+                                        </template>
+                                        <template v-if="removeListColor==4">
+                                            <span class='dhc glyphicon glyphicon-unchecked' style='color:orange' title='No problem.' v-on:click="doExercise()">
+                                            </span>
+                                            1500-meter running
+                                        </template>
+                                        <template v-if="removeListColor==5">
+                                            <span class='dhc glyphicon glyphicon-unchecked' style='color:red' title='No problem.' v-on:click="doExercise()">
+                                            </span>
+                                            3000-meter running
+                                        </template>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="jquery.js">
+        </script>
+        <script src="jquery-ui-1.11.4.custom//jquery-ui.js">
+        </script>
+        <script src="js/bootstrap.min.js">
+        </script>
+        <script src="https://cdn1.lncld.net/static/js/av-mini-0.6.4.js">
+        </script>
+        <script src="vue.js">
+        </script>
+        <script src="index.js">
+        </script>
+    </body>
+</html>
