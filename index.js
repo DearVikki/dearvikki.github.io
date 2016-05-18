@@ -109,7 +109,7 @@ var main = function() {
                                 setTimeout(function() {
                                     $('.ad').removeClass('bigsize');
                                 }, 500)
-                            }, 12000)
+                            }, 13000)
                         }, 10000)
                     }, 2000)
                 }, 1000)

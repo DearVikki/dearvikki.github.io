@@ -52,7 +52,7 @@ html, body {
     height: 75px;
     background: url(images/hat.png);
     left: calc(50% - 50px);
-    top: -700px;
+    top: -800px;
     transform: rotate(-40deg);
     /*transition: all 1s cubic-bezier(.78, 0, 1, 1.2);*/
 }
