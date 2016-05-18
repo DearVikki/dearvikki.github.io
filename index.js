@@ -74,19 +74,20 @@ var main = function() {
             setTimeout(function() {
                 $('.rbt1Box .word').addClass('active');
             }, 3000)
-            setTimeout(function() {
-                $('.doorBox').show();
-                var i=0;
-                $('.homeBox span').each(function(){
-                    var $this =$(this)
-                    i++;
-                    !function($this,i){setTimeout(function(){
-                      
-                        $this.css('opacity',1)
-                    },100*i)}($this,i)
-                })
-            }, 4000)
-        }
+    //setTimeout(function() {
+    $('.doorBox').show();
+    var i = 0;
+    $('.homeBox span').each(function() {
+            var $this = $(this)
+            i++;
+            ! function($this, i) {
+                setTimeout(function() {
+                    $this.css('opacity', 1)
+                }, 100 * i)
+            }($this, i)
+        })
+        // }, 4000)
+        // }
         //door appears
     $('.doorBox').click(function() {
             $(this).addClass('active');
@@ -94,34 +95,24 @@ var main = function() {
                 $('.doorBox .door').addClass('active');
                 setTimeout(function() {
                     greetingHide();
-                    $('.homeBox').fadeOut(2000);
+                    //$('.homeBox').fadeOut(2000);
+                    var i = 0;
+                    $('.homeBox span').each(function() {
+                        var $this = $(this)
+                        i++;
+                        ! function($this, i) {
+                            setTimeout(function() {
+                                $this.css('opacity', 0)
+                            }, 100 * i)
+                        }($this, i)
+                    })
                     setTimeout(function() {
                         rbtBack();
                         setTimeout(function() {
                             $('.doorBox .door').removeClass('active');
-                            $('.mainBox').show();
-                            $('.wdw').each(function() {
-                                var $this = $(this),
-                                    time = $this.data('wdwshow');
-                                ! function(time, $this) {
-                                    setTimeout(function() {
-                                        $this.show()
-                                        setTimeout(function() {
-                                            $this.removeClass('nowidth').removeClass('noheight');
-                                            setTimeout(function() {
-                                                $this.find('.hide').removeClass('hide');
-                                            }, 1500)
-                                        }, 100)
-                                    }, time)
-                                }(time, $this)
-                            })
-                            setTimeout(function() {
-                                $('.ad').show();
-                                setTimeout(function() {
-                                    $('.ad').removeClass('bigsize');
-                                }, 500)
-                            }, 13000)
-                        }, 10000)
+                            $('.homeBox').hide();
+                            if ($('.mainBox').data('active') != 1) wdwSection();
+                        }, 10500)
                     }, 2000)
                 }, 1000)
             }, 500)
@@ -141,36 +132,73 @@ var main = function() {
         }
         //rabbits disappear
     var rbtBack = function() {
-            var rbtbackPattern = function(obj) {
-                obj.find('.pop').removeClass('active').addClass('popBack');
-                setTimeout(function() {
-                    obj.addClass('boxPopBack');
-                }, 500)
-            }
+        var rbtbackPattern = function(obj) {
+            obj.find('.pop').removeClass('active').addClass('popBack');
             setTimeout(function() {
-                rbtbackPattern($('.rbt1Box'))
-            }, 0)
-            setTimeout(function() {
-                rbtbackPattern($('.rbt3Box'))
+                obj.addClass('boxPopBack');
             }, 500)
-            setTimeout(function() {
-                rbtbackPattern($('.rbt4Box'))
-            }, 1000)
-            setTimeout(function() {
-                rbtbackPattern($('.rbt2Box'))
-            }, 1500)
-            setTimeout(function() {
-                $('.rbt').addClass('changeCar')
-                setTimeout(function() {
-                    $('.rbt').addClass('carActive');
-                }, 1000)
-            }, 4500)
-            $('.rbt1Box,.rbt2Box,.rbt3Box,.rbt4Box').on('webkitTransitionEnd', function() {
-                $(this).hide();
-            }).children().on("webkitTransitionEnd", function() {
-                return false;
-            });
         }
+        setTimeout(function() {
+            rbtbackPattern($('.rbt1Box'))
+        }, 0)
+        setTimeout(function() {
+            rbtbackPattern($('.rbt3Box'))
+        }, 500)
+        setTimeout(function() {
+            rbtbackPattern($('.rbt4Box'))
+        }, 1000)
+        setTimeout(function() {
+            rbtbackPattern($('.rbt2Box'))
+        }, 1500)
+        setTimeout(function() {
+            $('.rbt').addClass('changeCar')
+            setTimeout(function() {
+                $('.rbt').addClass('carActive');
+            }, 1000)
+        }, 4500)
+        $('.rbt1Box,.rbt2Box,.rbt3Box,.rbt4Box').on('webkitTransitionEnd', function() {
+            var $this = $(this)
+            $this.find('.pop').addClass('vanish');
+            ! function($this) {
+                setTimeout(function() {
+                    $this.hide();
+                }, 2000)
+            }($this)
+        }).children().on("webkitTransitionEnd", function() {
+            return false;
+        });
+    }
+    var wdwSection = function() {
+            $('.skip').hide();
+            $('.mainBox').show();
+            $('.wdw').each(function() {
+                var $this = $(this),
+                    time = $this.data('wdwshow');
+                ! function(time, $this) {
+                    setTimeout(function() {
+                        $this.show()
+                        setTimeout(function() {
+                            $this.removeClass('nowidth').removeClass('noheight');
+                            setTimeout(function() {
+                                $this.find('.hide').removeClass('hide');
+                            }, 1000)
+                        }, 100)
+                    }, time)
+                }(time, $this)
+            })
+            setTimeout(function() {
+                $('.ad').show();
+                setTimeout(function() {
+                    $('.ad').removeClass('bigsize');
+                }, 500)
+            }, 9500)
+        }
+        //skip warmup animation
+    $('.skip').click(function() {
+            $('.rbtBox,.homeBox').fadeOut();
+            $('.mainBox').data('active', 1);
+            wdwSection();
+        })
         //window section
     $('.wdw3').mouseenter(function() {
         var wdw3Rbt = $('.wdw3-rbt');

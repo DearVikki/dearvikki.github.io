@@ -1,5 +1,42 @@
 var main = function() {
-    $('div').vikkiMagnifier();
+    //预加载
+    function preloadImg(list, imgs) {
+        var def = $.Deferred(),
+            len = list.length;
+        $(list).each(function(i, e) {
+            var img = new Image();
+            img.src = e;
+            if (img.complete) {
+                imgs[i] = img;
+                len--;
+                if (len == 0) {
+                    def.resolve();
+                }
+            } else {
+                img.onload = (function(j) {
+                    return function() {
+                        imgs[j] = img
+                        len--;
+                        if (len == 0) {
+                            def.resolve();
+                        }
+                    };
+                })(i);
+                img.onerror = function() {
+                    len--;
+                    console.log('fail to load image');
+                };
+            }
+        });
+        return def.promise();
+    }
+    var list = []
+    imgs = [];
+    list.push('big.jpg','small.jpg');
+    $.when(preloadImg(list, imgs)).done(function() {
+        $('div').vikkiMagnifier();
+    })
+    
     //上传图片
     var smallSrc, smallImage, bigSrc, bigImage;
     $('#smallFile').on('change', function() {

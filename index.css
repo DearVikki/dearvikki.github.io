@@ -7,7 +7,7 @@ html, body {
     overflow-y: hidden;
 }
 
-.homeBox{
+.homeBox {
     position: absolute;
     top: 0;
     left: 0;
@@ -21,10 +21,32 @@ html, body {
     font-size: 70px;
     font-family: fantasy;
 }
-.homeBox span{
+
+.homeBox span {
     opacity: 0;
-    transition:opacity 2s;
+    transition: opacity 2s;
 }
+
+.skip {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 15px;
+    font-family: cursive;
+    color: ivory;
+    border: 2px solid ivory;
+    width: 40px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.skip:active {
+    background: ivory;
+    color: #F7A6A0;
+}
+
 .rbtBox {
     position: absolute;
     height: 250px;
@@ -146,7 +168,6 @@ html, body {
     height: 80px;
     left: -20px;
     top: 20px;
-    overflow:
 }
 
 .rbt1Box .pop.popBack {
@@ -157,13 +178,18 @@ html, body {
 
 .boxPopBack {
     z-index: 2;
-    left: calc(50% + 430px) !important;
+    left: calc(50% + 420px) !important;
 }
 
 .rbt1Box.boxPopBack .pop.popBack {
     background-position: -160px 0;
-    animation: popBack12 .5s 9;
+    animation: popBack12 .5s 7;
     animation-fill-mode: backwards;
+}
+
+.pop.popBack.vanish {
+    animation: vanish 2s !important;
+    animation-fill-mode: forwards !important;
 }
 
 @keyframes popBack11 {
@@ -175,6 +201,13 @@ html, body {
 @keyframes popBack12 {
     to {
         bottom: 10px;
+    }
+}
+
+@keyframes vanish {
+    to {
+        transform: scale(.2);
+        transform-origin: bottom;
     }
 }
 
@@ -198,7 +231,7 @@ html, body {
     height: 200px;
     left: calc(50% - 250px);
     top: 50px;
-    transition: left 8s;
+    transition: left 7s;
 }
 
 .rbt2Box .pop {
@@ -234,7 +267,7 @@ html, body {
 
 .rbt2Box.boxPopBack .pop.popBack {
     background-position: -180px 0;
-    animation: popBack22 .5s 15;
+    animation: popBack22 .5s 12;
     animation-fill-mode: backwards;
 }
 
@@ -371,7 +404,7 @@ html, body {
     height: 100%;
     border: 3px solid rgb(253, 254, 242);
     border-radius: 10px;
-    position:absolute; 
+    position: absolute;
     transform-style: preserve-3d;
     transition: all 1s, transform 2s;
 }
@@ -1390,7 +1423,8 @@ ul.active {
         transform: scale(.8, .9) translate(0, 110px);
     }
     .wdw4.shuffle2 {
-        transform: translate(0, 100px);}
+        transform: translate(0, 100px);
+    }
     .wdw1.shuffle3 {
         transform: scale(.8) translate(0, 100px);
     }
@@ -1406,7 +1440,7 @@ ul.active {
     .wdw1, .wdw2, .wdw3 {
         transform: translate(0, 210px);
     }
-    .wdw4, .wdw56, .wdw7, .ad ,.ad.bigsize{
+    .wdw4, .wdw56, .wdw7, .ad, .ad.bigsize {
         transform: translate(0, 110px);
     }
 }
@@ -1419,12 +1453,13 @@ ul.active {
 @font-face {
     font-family: calamityJoe;
     src: url('calamityJoe.ttf');
-}]
-@font-face {
+}
+
+] @font-face {
     font-family: GrandHotel;
     src: url('GrandHotel.otf');
 }
 
-.doorBox, .detail-close, .wdw3-arrow-left, .wdw3-arrow-right, .wdw2-start, .wdw1-origin, .wdw2-origin, .wdw3-origin {
+.skip, .doorBox, .detail-close, .wdw3-arrow-left, .wdw3-arrow-right, .wdw2-start, .wdw1-origin, .wdw2-origin, .wdw3-origin {
     cursor: pointer;
 }
