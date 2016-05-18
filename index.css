@@ -4,7 +4,7 @@ html, body {
     height: 100%;
     margin: 0;
     background-color: #F7A6A0;
-    overflow-y:hidden;
+    overflow-y: hidden;
 }
 
 .rbtBox {
@@ -208,17 +208,6 @@ html, body {
     top: 0px;
 }
 
-.word img {
-    left: 0;
-    animation: wordShake infinite;
-}
-
-@keyframes wordShake {
-    to {
-        transform: translateX(-125px);
-    }
-}
-
 .rbt2Box .pop.popBack {
     background: url(images/rabbit2-walking.png);
     animation: popBack21 .3s steps(2);
@@ -352,19 +341,19 @@ html, body {
     height: 40px;
     border: 3px solid rgb(253, 254, 242);
     border-radius: 10px;
-    cursor: pointer;
     -webkit-perspective: 1000;
     transition: all 1s;
     z-index: 1;
 }
 
 .doorBox .door {
-    left: 0;
-    top: 0;
+    left: -2px;
+    top: -1px;
     width: 100%;
     height: 100%;
     border: 3px solid rgb(253, 254, 242);
     border-radius: 10px;
+    position:absolute; 
     transform-style: preserve-3d;
     transition: all 1s, transform 2s;
 }
@@ -402,8 +391,9 @@ html, body {
 }
 
 .doorBox.active .door.active {
-    transform: rotateY(170deg);
-    transform-origin: 99%;
+    transform: rotateY(180deg);
+    transform-origin: 99.5%;
+    animation: doorOpen 2s linear backwards;
 }
 
 .rbt.changeCar {
@@ -840,7 +830,7 @@ html, body {
     border-color: transparent;
     border-bottom-color: black;
     position: absolute;
-    top: 0px;
+    top: -1px;
     left: 0px;
 }
 
@@ -939,8 +929,6 @@ html, body {
     text-align: center;
     font-size: 10px;
     font-family: cursive;
-    cursor: pointer;
-    cursor: pointer;
 }
 
 table {
@@ -974,13 +962,13 @@ td:hover .right {
     background-image: url(images/wdw1-detail-profile.png);
 }
 
-.wdw1-profile:hover img{
+.wdw1-profile:hover img {
     animation: sakuraFalling 12s infinite linear;
 }
 
 @keyframes sakuraFalling {
     to {
-        transform:translateY(180px);
+        transform: translateY(180px);
     }
 }
 
@@ -1062,7 +1050,6 @@ td:hover .wrong {
     background: url(images/arrow-left.png);
     right: 15px;
     bottom: 7px;
-    cursor: pointer;
 }
 
 .wdw3-arrow-right {
@@ -1174,7 +1161,6 @@ ul.active {
     top: 277px;
     left: 145px;
     outline: none;
-    cursor: pointer;
 }
 
 .wdw2-start:active {
@@ -1380,4 +1366,8 @@ ul.active {
 @font-face {
     font-family: calamityJoe;
     src: url('calamityJoe.ttf');
+}
+
+.doorBox, .detail-close, .wdw3-arrow-left, .wdw3-arrow-right, .wdw2-start, .wdw1-origin, .wdw2-origin, .wdw3-origin {
+    cursor: pointer;
 }
