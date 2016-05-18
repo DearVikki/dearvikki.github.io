@@ -30,14 +30,11 @@ var main = function() {
         return def.promise();
     }
     var list = []
-        imgs = [];
-        $('img').each(function(){
-            list.push($(this).attr('src'));
-        })
-        $('.pop').each(function(){
-            list.push($(this).css('background-image').slice(4, -1).replace(/"/g, ""));
-        })
-         
+    imgs = [];
+    $('img').each(function() {
+        list.push($(this).attr('src'));
+    });
+    list.push('images/hat.png', 'images/rabbit1.png', 'images/rabbit1-popping.png', 'images/rabbit1-walking.png', 'images/rabbit2.png', 'images/rabbit2-popping.png', 'images/rabbit2-walking.png', 'images/rabbit34.png', 'images/rabbit3-popping.png', 'images/rabbit3-walking.png', 'images/rabbit4-popping.png', 'images/rabbit4-walking.png', 'images/car-body.png', 'images/car-wheel1.png', 'images/car-wheel2.png', 'images/wdw56-mask.png', 'images/wdw6-bar-draft.png');
     $.when(preloadImg(list, imgs)).done(function() {
         //预加载结束
         //warmup animation section
