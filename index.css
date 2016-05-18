@@ -26,7 +26,40 @@ html, body {
     opacity: 0;
     transition: opacity 2s;
 }
+.loadingBox{
+    margin:0 auto;
+    width: 250px;
+}
+.loading{
+    width: 10px;
+    height: 10px;
+    margin-left: 25px;
+    display: inline-block;
+    background: ivory;
+    border-radius: 100%;
+    animation:loading 2.5s infinite cubic-bezier(.69,-0.55,.29,1.43);
+}
+.loading:nth-child(2){
+    animation-delay:.5s;
+}
+.loading:nth-child(3){
+    animation-delay:1s;
+}
+.loading:nth-child(4){
+    animation-delay:1.5s;
+}
+.loading:nth-child(5){
+    animation-delay:2s;
+}
+@keyframes loading{
+    80%{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(-15px);
+    }
 
+}
 .skip {
     position: absolute;
     top: 10px;
@@ -40,6 +73,7 @@ html, body {
     line-height: 25px;
     text-align: center;
     border-radius: 5px;
+    display: none;
 }
 
 .skip:active {
