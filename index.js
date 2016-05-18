@@ -57,6 +57,7 @@ var main = function() {
             $('.rbt3Box .pop,.rbt4Box .pop').addClass('active');
             setTimeout(function() {
                 greetingShow();
+
             }, 800)
         })
     });
@@ -75,6 +76,15 @@ var main = function() {
             }, 3000)
             setTimeout(function() {
                 $('.doorBox').show();
+                var i=0;
+                $('.homeBox span').each(function(){
+                    var $this =$(this)
+                    i++;
+                    !function($this,i){setTimeout(function(){
+                      
+                        $this.css('opacity',1)
+                    },100*i)}($this,i)
+                })
             }, 4000)
         }
         //door appears
@@ -84,6 +94,7 @@ var main = function() {
                 $('.doorBox .door').addClass('active');
                 setTimeout(function() {
                     greetingHide();
+                    $('.homeBox').fadeOut(2000);
                     setTimeout(function() {
                         rbtBack();
                         setTimeout(function() {

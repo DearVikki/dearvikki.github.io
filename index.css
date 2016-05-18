@@ -7,6 +7,24 @@ html, body {
     overflow-y: hidden;
 }
 
+.homeBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 600px;
+    height: 200px;
+    color: ivory;
+    text-align: center;
+    font-size: 70px;
+    font-family: fantasy;
+}
+.homeBox span{
+    opacity: 0;
+    transition:opacity 2s;
+}
 .rbtBox {
     position: absolute;
     height: 250px;
@@ -1344,8 +1362,43 @@ ul.active {
     .wdw1, .wdw2, .wdw3 {
         transform: translate(0, 120px);
     }
-    .wdw4, .wdw56, .wdw7, .ad {
+    .wdw4, .wdw56, .wdw7, .ad, .ad.bigsize {
         transform: translate(0, 50px);
+    }
+    .wdw1.shuffle1 {
+        transform: translate(-20px, 100px) scale(.9);
+    }
+    .wdw2.shuffle1 {
+        transform: scale(0.75, 0.9) translate(-40px, 20px);
+    }
+    .wdw3.shuffle1 {
+        transform: scale(0.7, 0.7) translate(-50px, 85px);
+    }
+    .wdw4.shuffle1 {
+        transform: translate(-80px, 40px);
+    }
+    .wdw56.shuffle1, .wdw7.shuffle1 {
+        transform: translate(-50px, 70px);
+    }
+    .wdw1.shuffle2 {
+        transform: scale(.9, .8) translate(0, 110px);
+    }
+    .wdw2.shuffle2, .wdw56.shuffle2, .wdw7.shuffle2 {
+        transform: translate(0, 100px);
+    }
+    .wdw3.shuffle2 {
+        transform: scale(.8, .9) translate(0, 110px);
+    }
+    .wdw4.shuffle2 {
+        transform: translate(0, 100px);}
+    .wdw1.shuffle3 {
+        transform: scale(.8) translate(0, 100px);
+    }
+    .wdw2.shuffle3 {
+        transform: scale(.85) translate(0, 90px);
+    }
+    .wdw3.shuffle3, .wdw4.shuffle3, .wdw56.shuffle3, .wdw7.shuffle3 {
+        transform: translate(0, 90px);
     }
 }
 
@@ -1353,7 +1406,7 @@ ul.active {
     .wdw1, .wdw2, .wdw3 {
         transform: translate(0, 210px);
     }
-    .wdw4, .wdw56, .wdw7, .ad {
+    .wdw4, .wdw56, .wdw7, .ad ,.ad.bigsize{
         transform: translate(0, 110px);
     }
 }
@@ -1366,6 +1419,10 @@ ul.active {
 @font-face {
     font-family: calamityJoe;
     src: url('calamityJoe.ttf');
+}]
+@font-face {
+    font-family: GrandHotel;
+    src: url('GrandHotel.otf');
 }
 
 .doorBox, .detail-close, .wdw3-arrow-left, .wdw3-arrow-right, .wdw2-start, .wdw1-origin, .wdw2-origin, .wdw3-origin {
