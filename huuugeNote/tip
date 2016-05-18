@@ -1,0 +1,8 @@
+在我们家里不用执行下面的
+npm install -g gulp browser-sync uglifyjs
+
+在项目根目录
+npm install gulp gulp-less browser-sync
+
+然后启动的时候就
+gulp dev

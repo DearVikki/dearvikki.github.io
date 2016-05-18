@@ -1,0 +1,300 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+#noteContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.sidebar-wrapper {
+  position: absolute;
+  left: calc(50% - 350px);
+  bottom: 0;
+  width: 700px;
+}
+.sidebar {
+  position: relative;
+  width: 95px;
+  height: 5px;
+  z-index: 1000;
+  display: inline-block;
+}
+.icoon {
+  position: absolute;
+  right: 0;
+  height: 170px;
+  padding: 12px 17px;
+  cursor: pointer;
+  background-color: #F7CAC9;
+  width: 103px;
+  /*transition: left 2s;*/
+}
+.detail {
+  font-size: 20px;
+  font-weight: bold;
+  z-index: -10;
+  display: inline-block;
+  width: 60px;
+  color: white;
+  background-color: #F7CAC9;
+  margin: 5px auto;
+  text-align: center;
+}
+.icoon img {
+  width: 60px;
+  height: 60px;
+  margin-left: 5px;
+  border-radius: 100%;
+}
+/*.icoon:hover{
+     right:-95px;
+ }*/
+.centerbar {
+  position: absolute;
+  left: -250px;
+  top: 0;
+  width: 280px;
+  min-width: 250px;
+  max-width: 450px;
+  height: 100%;
+  padding: 5px;
+  transition: all .3s .3s;
+  opacity: .7;
+}
+.centerbar.mouseactive {
+  left: 0;
+  opacity: 1;
+  transition: all .3s;
+}
+.centerbar .type {
+  height: 50px;
+  width: 100%;
+  padding: 10px 10px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.55);
+  background-color: #F7CAC9;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.type span {
+  font-weight: bold;
+  height: 28px;
+  line-height: 28px;
+}
+.type i {
+  width: initial;
+  margin-left: 10px;
+}
+.type .dropdown {
+  height: 30px;
+}
+.ui.dropdown .menu {
+  min-width: 120px;
+  /*本来是min-width:max-content的，就会随着内容改*/
+}
+.ui.dropdown .menu > .item {
+  padding-right: 5px !important;
+}
+.dropdown .text {
+  line-height: 30px;
+}
+.type .ui.circular.label.notebookSize {
+  float: right;
+  min-width: 1.8em !important;
+  min-height: 1.5em;
+  padding: 3px !important;
+  margin-right: 5px !important;
+}
+.star {
+  vertical-align: 2px;
+}
+.starActive {
+  color: #FFE623;
+  text-shadow: 0 -1px 0 #ddc507, -1px 0 0 #DDC507, 0 1px 0 #DDC507, 1px 0 0 #DDC507;
+}
+.starHidden {
+  display: none;
+}
+.index-wrapper ul {
+  width: 100%;
+  padding: 0 0px;
+}
+.index,
+.indexNB {
+  list-style: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 8px 0px #F7CAC9;
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  padding: 5px;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+.index:hover,
+.indexNB:hover {
+  animation: breath 1s infinite alternate;
+}
+@keyframes breath {
+  to {
+    box-shadow: 0px 0px 8px 2px #F7CAC9;
+  }
+}
+.indexNB {
+  height: 60px;
+}
+.indexNB .ui.circular.label {
+  vertical-align: 3px;
+}
+.indexInsidewrap {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  left: -100%;
+  transition: all .5s;
+}
+.indexInsidewrap.moreActive {
+  transform: translateX(50%);
+  transition: all .5s;
+}
+.indexInsidewrap1,
+.indexInsidewrap2 {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+.indexInsidewrap1 {
+  float: right;
+}
+.indexInsidewrap2 {
+  float: left;
+}
+.icon.more:hover .indexInsidewrap {
+  transform: translateX(100%);
+}
+.indexTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+}
+.indexTime {
+  color: #aaa;
+}
+.indexNotebook {
+  display: inline-block;
+  width: 100px;
+  border: none;
+  margin-left: 5px;
+}
+.indexNotebook:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+.index-wrapper .active,
+.index-wrapper .active .indexNotebook {
+  background-color: #eee;
+}
+.indexContent {
+  margin-top: 20px;
+}
+.index .delete {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  display: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #aaa;
+}
+.index .more,
+.more2 {
+  position: absolute;
+  top: 2px;
+  cursor: pointer;
+  color: #aaa;
+  display: none;
+}
+.index .more {
+  left: 8px;
+}
+.index .more2 {
+  right: 8px;
+}
+.index:hover .delete {
+  display: block;
+}
+.index:hover .more {
+  display: block;
+}
+.type .ui.circular.label.notebookSize {
+  float: right;
+  min-width: 1.8em !important;
+  min-height: 1.5em;
+  padding: 3px !important;
+  margin-right: 5px !important;
+}
+.notebar {
+  z-index: -20;
+  position: absolute;
+  right: -250px;
+  top: 0;
+  height: 100%;
+  padding: 5px 1px;
+  width: calc(100% - 30px);
+  transition: all .5s;
+}
+.notebar.mouseactive {
+  right: 0px;
+  transition: all .5s .5s;
+}
+.title input {
+  width: 100%;
+  outline: none;
+  height: 40px;
+  border: 1px solid #F7CAC9;
+  border-bottom: none;
+  padding-left: 10px;
+}
+textarea {
+  width: 100%;
+  height: 100%;
+}
+.note {
+  height: calc(100% - 40px);
+}
+.simditor,
+.simditor-wrapper {
+  height: 100%;
+}
+.simditor {
+  border: 1px solid #F7CAC9 !important;
+}
+.simditor-toolbar {
+  height: 45px;
+}
+.simditor-body {
+  height: 94%;
+  overflow-y: auto;
+}
+.reminder {
+  width: 30px;
+  background-color: rgba(171, 158, 158, 0.5);
+  position: absolute;
+  right: 20px;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  font-family: '微软雅黑';
+}
+.reminder p {
+  font-size: 20px;
+}

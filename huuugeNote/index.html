@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>
+            HuuuugeNote
+        </title>
+        <link rel="stylesheet" type="text/css" href="resource/lib/semantic/semantic.min.css"/>
+        <link rel="stylesheet/less" type="text/css" href="resource/stylesheet/index.less" />
+        <link rel="stylesheet" type="text/css" href="resource/lib/simditor/simditor.css" />
+        <script src="https://cdn.bootcss.com/less.js/2.6.0/less.min.js">
+        </script>
+        <script type="text/javascript" src="resource/lib/validator.min.js">
+        </script>
+    </head>
+    <body>
+        <div class="ui page dimmer transtition active">
+            <div class="content">
+                <div class="center welcome">
+                    <h2 class="ui inverted icon header step1" style="display:none;">
+                        Hi，欢迎来到Huuuge笔记。
+                    </h2>
+                    <h2 class="ui inverted icon header step2" style="display:none">
+                        现在开始登陆吧！
+                    </h2>
+                    <div class="ui inverted large input step3" style="display:none">
+                        <div style="display:inline-block; vertical-align:top">
+                            <input type="text" placeholder="请输入你的邮箱地址"/>
+                            <div class="ui pointing red basic hidden label">
+                                邮箱名好像不对！⊙⊙
+                            </div>
+                        </div>
+                        <button class="ui inverted button ">
+                            下一步
+                        </button>
+                       
+                    </div>
+                    <div class="ui inverted large input step4" style="display:none">
+                        <div style="display:inline-block; vertical-align:top">
+                            <i class="chevron circle left inverted icon" id="back" title='上一步' style='cursor:pointer'>
+                            </i>
+                            <i class="help circle inverted icon" id="forget" title='忘记密码' style='cursor:pointer'>
+                            </i>
+                            <input type="password" placeholder="请输入你的密码"/>
+                            <div class="ui pointing red basic hidden label">
+                                密码错误 T^T
+                            </div>
+                        </div>
+                        <button class="ui inverted button ">
+                            下一步
+                        </button>
+
+                    </div>
+                     <button class="ui inverted button traveller" style="display:none">
+                            游客登录
+                        </button>
+                    <h2 class="ui inverted icon header step5" style="display:none">
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <div id="noteContainer" style="display:none">
+            <div class="sidebar-wrapper" inline-template>
+                <div class="sidebar">
+                    <div class="icoon">
+                        <i class="huge inverted user icon">
+                        </i>
+                        <img src="resource/image/image.jpg" class="avatar" style="display:none"/>
+                        <input id="openFile" type="file" style="display:none"/>
+                    </div>
+                </div>
+                <div class="sidebar" >
+                    <div class="icoon" v-on:click="addNote()">
+                        <img src="resource/image/new.png"/>
+                        <div class="detail">
+                            新建
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="icoon"   v-on:click="allNoteOf()">
+                        <img src="resource/image/note.png"/>
+                        <div class="detail" >
+                            全部笔记
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="icoon"   v-on:click="allNotebook()">
+                        <img src="resource/image/notebook.png"/>
+                        <div class="detail" >
+                            笔记本
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="icoon" v-on:click="allNoteOf(undefined,1)">
+                        <img src="resource/image/star.png"/>
+                        <div class="detail">
+                            收藏
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="icoon" v-on:click="changeTheme(reminder.theme)">
+                        <img src="resource/image/skin.png"/>
+                        <div class="detail">
+                            主题
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="icoon" v-on:click="saveNote()">
+                        <img src="resource/image/save.png"/>
+                        <div class="detail">
+                            同步
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="icoon" id="logOut">
+                        <img src="resource/image/logout.png" v-on:click="logOut()"/>
+                        <div class="detail">
+                            登出
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="centerbar mouseactive" style="display:inline-block">
+                <div class="type">
+                    <span>
+                        {{type}}
+                    </span>
+                </div>
+                <div class="index-wrapper" style="width:100%">
+                    <ul>
+                        <li  v-for="note in notes" class="index indexItem" data-notebook={{note.notebook}} data-id={{note.id}}  v-bind:class="[note.indexActive]" v-on:click="switchNote(note)">
+                            <div class="indexInsidewrap">
+                                <div class="indexInsidewrap1">
+                                    <p>
+                                        <span class="indexTitle">
+                                            {{note.title}}
+                                        </span>
+                                        <i class="ui empty star icon" v-bind:class="{'starActive':note.star==1,'starHidden':note.star==2}" v-on:click="addStar(note.id)">
+                                        </i>
+                                    </p>
+                                    <p class="indexTime">
+                                        <span>
+                                            {{note.time}}
+                                        </span>
+                                        <input class="indexNotebook" v-model="note.notebook"/>
+                                    </p>
+                                    <span class="delete" v-on:click="deleteNote(note)" title="不要丢掉我好不好TAT">
+                                        ×
+                                    </span>
+                                    <i class="resize horizontal icon more" >
+                                    </i>
+                                </div>
+                                <div class="indexInsidewrap2">
+                                    <i class="resize horizontal icon more2">
+                                    </i>
+                                    <p class="indexContent">
+                                        {{note.indexContent}}
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li v-for="notebook in notebooks" class="indexNB" data-notebook={{notebook.name}} v-on:click="allNoteOf(notebook)">
+                            <p class="indexTitle">
+                                <span>
+                                    {{notebook.name}}
+                                </span>
+                                <a class="ui grey circular label notebookSize">
+                                    {{notebook.size}}
+                                </a>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="notebar">
+                <div class="title">
+                    <input v-model="computedTitle"/>
+                </div>
+                <div class="note">
+                    <textarea id="editor" autofocus >
+                    </textarea>
+                </div>
+            </div>
+            <div class="reminder" v-show="reminder.status == 'true'">
+                <p>
+                    {{reminder.text}}
+                </p>
+            </div>
+        </div>
+    </body>
+    <script src="resource/lib/jquery.js">
+    </script>
+    <script src="https://cdn1.lncld.net/static/js/av-mini-0.6.4.js">
+    </script>
+    <script src="resource/lib/semantic/semantic.min.js">
+    </script>
+    <script src="resource/moment.js">
+    </script>
+    <script type="text/javascript" src="resource/lib/simditor/module.js">
+    </script>
+    <script type="text/javascript" src="resource/lib/simditor/hotkeys.js">
+    </script>
+    <script type="text/javascript" src="resource/lib/simditor/uploader.js">
+    </script>
+    <script type="text/javascript" src="resource/lib/simditor/simditor.js">
+    </script>
+    <script src="resource/javascript/index.js">
+    </script>
+    <script src="resource/javascript/vue.js">
+    </script>
+</html>
