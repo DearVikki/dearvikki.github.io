@@ -1,4 +1,5 @@
 var main = function() {
+    $('body').hide();
     //预加载
     function preloadImg(list, imgs) {
         var def = $.Deferred(),
@@ -34,6 +35,7 @@ var main = function() {
     imgs = [];
     list.push('big.jpg','small.jpg');
     $.when(preloadImg(list, imgs)).done(function() {
+        $('body').show();
         $('div').vikkiMagnifier();
     })
     
