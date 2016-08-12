@@ -29,8 +29,6 @@ html, body {
 .loadingBox{
     margin:0 auto;
     width: 250px;
-    font-family: '微软雅黑';
-    font-size: 16px;
 }
 .loading{
     width: 10px;
