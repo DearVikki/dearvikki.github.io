@@ -1,0 +1,34 @@
+/* some ref from: 
+https://3os.org/utilities/markdown-cheatsheet/awesome-pages/ */
+
+[data-md-color-accent='pink'] {
+  --md-typeset-a-color: #f50056;
+}
+
+:root, [data-md-color-scheme=default] {
+  --md-text-font: "Rubik";
+  --md-code-font: "Rubik Mono";
+}
+
+.md-grid {
+  max-width: 1560px;
+}
+.md-search {
+  margin-right: 10px;
+}
+
+.md-footer__inner:not([hidden]) {
+  display: none;
+}
+
+.md-footer-meta {
+  border-bottom: var(--md-typeset-a-color) 5px solid;
+}
+
+.md-header__button.md-logo{
+  display: none !important;
+}
+.md-header__title{
+  margin-left: 0.6rem !important;
+}
+

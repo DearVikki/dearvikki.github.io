@@ -1,0 +1,5921 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://dearvikki.github.io/tech/Langs/Java/1.%20basic/1.%20index/">
+      
+      
+        <link rel="prev" href="../../To%20Do%20Path/">
+      
+      
+        <link rel="next" href="../2.%20ClassLoader%20%E4%B8%93%E6%A0%8F/">
+      
+      <link rel="icon" href="../../../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>1. index - Vikki's Stack | Tech</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-index" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Vikki&#39;s Stack | Tech" class="md-header__button md-logo" aria-label="Vikki's Stack | Tech" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vikki's Stack | Tech
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. index
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
+      MindMap Menu
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Basic-is-everything/Linux/shells/" class="md-tabs__link">
+        Basic is everything
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../JavaScript/ancient/JavaScript%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" class="md-tabs__link md-tabs__link--active">
+        Langs
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Frontend/React/apis/hooks/" class="md-tabs__link">
+        Frontend
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Backend/DevOps/docker/" class="md-tabs__link">
+        Backend
+      </a>
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Utilities/nginx/" class="md-tabs__link">
+        Utilities
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Vikki&#39;s Stack | Tech" class="md-nav__button md-logo" aria-label="Vikki's Stack | Tech" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Vikki's Stack | Tech
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        MindMap Menu
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Basic is everything
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Basic is everything
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          Linux
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Linux
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Linux/shells/" class="md-nav__link">
+        shells
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Linux/ssh/" class="md-nav__link">
+        ssh
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Linux/%E7%AC%A8%E5%85%94%E5%85%94%E7%9A%84%E6%95%85%E4%BA%8B/" class="md-nav__link">
+        笨兔兔的故事
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Linux/shells-macos/" class="md-nav__link">
+        shells-macos
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Linux/Files/" class="md-nav__link">
+        Files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Linux/Linux%20process%20state/" class="md-nav__link">
+        Linux process state
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Linux/UnixLinux%20%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" class="md-nav__link">
+        Unix/Linux 网络编程
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Linux/shell%20%E5%B0%8F%E5%8A%9F%E8%83%BD/" class="md-nav__link">
+        shell 小功能
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Linux/%E6%88%91%E5%81%9A%E8%BF%90%E7%BB%B4%E7%9A%84%E6%95%85%E4%BA%8B/" class="md-nav__link">
+        我做运维的故事
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          Network
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Network
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+          Protocols
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Protocols
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/protocols/TCPIP/" class="md-nav__link">
+        TCPIP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/protocols/%E5%9B%BE%E8%A7%A3TCPIP/" class="md-nav__link">
+        图解TCPIP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/protocols/HTTP/" class="md-nav__link">
+        HTTP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/protocols/WebProtocols/" class="md-nav__link">
+        WebProtocols
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/protocols/%E8%93%9D%E7%89%99/" class="md-nav__link">
+        蓝牙
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/protocols/%E5%90%84%E7%A7%8D%E5%8A%A0%E5%AF%86/" class="md-nav__link">
+        各种加密
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/protocols/ipc/" class="md-nav__link">
+        ipc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/protocols/RPC/" class="md-nav__link">
+        RPC
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/protocols/RTSP%26WebRTC/" class="md-nav__link">
+        RTSP&WebRTC
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_2" id="__nav_2_2_2_label" tabindex="0">
+          Basic
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Basic
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/basic/%E5%B1%80%E5%9F%9F%E7%BD%91%E5%8E%9F%E7%90%86%E5%92%8C%E6%8A%80%E6%9C%AF/" class="md-nav__link">
+        局域网原理和技术
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/basic/%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        数据通信技术基础
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/basic/%E5%9B%A0%E7%89%B9%E7%BD%91%E5%8E%9F%E7%90%86/" class="md-nav__link">
+        因特网原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/basic/%E7%BD%91%E7%BB%9C%E5%AE%9E%E8%B7%B5/" class="md-nav__link">
+        网络实践
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2_3" id="__nav_2_2_3_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/misc/Proxy/" class="md-nav__link">
+        proxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Network/misc/vpnVsSs/" class="md-nav__link">
+        vpnVsSS
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+          Algorithm
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithm
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_1" id="__nav_2_3_1_label" tabindex="0">
+          Algorithms
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Algorithms
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Algorithm/Algorithms/part1-week3/" class="md-nav__link">
+        part1-week3
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Algorithm/Algorithms/shuffle/" class="md-nav__link">
+        shuffle
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3_2" id="__nav_2_3_2_label" tabindex="0">
+          数据结构&算法之美
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          数据结构&算法之美
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Algorithm/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%26%E7%AE%97%E6%B3%95%E4%B9%8B%E7%BE%8E/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+          OS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          OS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_4_1" id="__nav_2_4_1_label" tabindex="0">
+          隐匿在计算机软硬件背后的语言
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          隐匿在计算机软硬件背后的语言
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/OS/%E9%9A%90%E5%8C%BF%E5%9C%A8%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%BD%AF%E7%A1%AC%E4%BB%B6%E8%83%8C%E5%90%8E%E7%9A%84%E8%AF%AD%E8%A8%80/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/OS/%E7%BC%96%E7%A0%81/" class="md-nav__link">
+        编码
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+          Coding
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Coding
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Coding/design-pattern/" class="md-nav__link">
+        design-pattern
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+          Others
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          Others
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6_1" id="__nav_2_6_1_label" tabindex="0">
+          程序员的数学
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_6_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          程序员的数学
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Others/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%95%B0%E5%AD%A6/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Basic-is-everything/Others/%E7%A6%BB%E6%95%A3%E6%95%B0%E5%AD%A6/" class="md-nav__link">
+        离散数学
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Langs
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Langs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          JavaScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          JavaScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+          Ancient
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Ancient
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/ancient/JavaScript%E6%9D%83%E5%A8%81%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        JavaScript权威指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/ancient/JavaScript%E7%BB%8F%E5%85%B8%E5%AE%9E%E4%BE%8B/" class="md-nav__link">
+        JavaScript经典实例
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/ancient/es6/" class="md-nav__link">
+        es6
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/ancient/es7/" class="md-nav__link">
+        es7
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/ancient/JS%20%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        JS 函数式编程指南
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/ancient/jsdoc/" class="md-nav__link">
+        jsdoc
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/keypoints/" class="md-nav__link">
+        Keypoints
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/YouDontKnowAboutJS/" class="md-nav__link">
+        YouDontKnowAboutJS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/UnderstandTheWeirdParts/" class="md-nav__link">
+        UnderstandTheWeirdParts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/promise/" class="md-nav__link">
+        Promise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../JavaScript/module/" class="md-nav__link">
+        Module
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          NodeJS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          NodeJS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NodeJS/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NodeJS/LearnAndUnderstandNodeJS/" class="md-nav__link">
+        LearnAndUnderstandNodeJS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NodeJS/AdvancedConcepts/" class="md-nav__link">
+        AdvancedConcepts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../NodeJS/misc/" class="md-nav__link">
+        Misc
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          TypeScript
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          TypeScript
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../TypeScript/%E8%AF%AD%E6%B3%95%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        语法记录
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          GoGoGo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          GoGoGo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GoGoGo/grammar/" class="md-nav__link">
+        grammar
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GoGoGo/basic/" class="md-nav__link">
+        basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../GoGoGo/%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/" class="md-nav__link">
+        资源汇总
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          Java
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Java
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../basic.md" class="md-nav__link">
+        basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../api小计.md" class="md-nav__link">
+        api小计
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../maven.md" class="md-nav__link">
+        maven
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../note.md" class="md-nav__link">
+        note
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../实践记录.md" class="md-nav__link">
+        实践记录
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/basic/" class="md-nav__link">
+        basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Python/%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/" class="md-nav__link">
+        资源汇总
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+          C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../C/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Frontend
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Frontend
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+          React
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          React
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_1" id="__nav_4_1_1_label" tabindex="0">
+          Apis
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Apis
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/apis/hooks/" class="md-nav__link">
+        hooks
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/apis/getDerivedStateFromProps/" class="md-nav__link">
+        getDerivedStateFromProps
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/apis/context/" class="md-nav__link">
+        context
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/apis/PureComponent/" class="md-nav__link">
+        PureComponent
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/apis/react-lazy/" class="md-nav__link">
+        react-lazy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_2" id="__nav_4_1_2_label" tabindex="0">
+          React router
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          React router
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/react-router/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_1_3" id="__nav_4_1_3_label" tabindex="0">
+          Antd
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_1_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_1_3">
+          <span class="md-nav__icon md-icon"></span>
+          Antd
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/antd/comps/" class="md-nav__link">
+        comps
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/sourceCode/" class="md-nav__link">
+        sourceCode
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/context/" class="md-nav__link">
+        context
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/refs/" class="md-nav__link">
+        refs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/ASmooshCast/" class="md-nav__link">
+        ASmooshCast
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/redux/" class="md-nav__link">
+        redux
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/react%26ts/" class="md-nav__link">
+        react&ts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/React/vsVue/" class="md-nav__link">
+        vsVue
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          Vue
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Vue
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+          Ancient
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Ancient
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vue/ancient/%E6%BA%90%E7%A0%81%E5%AD%A6%E4%B9%A0/" class="md-nav__link">
+        源码学习
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vue/ancient/%E6%B8%B2%E6%9F%93%E5%87%BD%E6%95%B0%26jsx/" class="md-nav__link">
+        渲染函数&jsx
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vue/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vue/%E6%A1%86%E6%9E%B6%E7%BB%93%E6%9E%84/" class="md-nav__link">
+        框架结构
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+          Engineering
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Engineering
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Engineering/%E6%89%93%E5%8C%85%E9%80%9A%E8%AF%86/" class="md-nav__link">
+        打包通识
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Engineering/webpack/" class="md-nav__link">
+        webpack
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Engineering/%E8%87%AA%E5%88%B6%E5%BC%82%E6%AD%A5%E6%A8%A1%E5%9D%97%E5%8A%A0%E8%BD%BD%E5%99%A8/" class="md-nav__link">
+        自制异步模块加载器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Engineering/eslint/" class="md-nav__link">
+        eslint
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Engineering/sourcemap%E7%9F%A5%E5%A4%9A%E5%B0%91/" class="md-nav__link">
+        sourcemap知多少
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Engineering/jest/" class="md-nav__link">
+        jest
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+          Vikki 的固定模式
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Vikki 的固定模式
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4_1" id="__nav_4_4_1_label" tabindex="0">
+          Ancient
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_4_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_4_1">
+          <span class="md-nav__icon md-icon"></span>
+          Ancient
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vikki%20%E7%9A%84%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F/ancient/%E5%89%8D%E7%AB%AF%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/" class="md-nav__link">
+        前端图片压缩
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vikki%20%E7%9A%84%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F/ancient/%E6%AD%A3%E5%88%99%E8%A6%81%E5%8D%95%E7%8B%AC%E5%BC%80%E4%B8%80%E7%AB%A0/" class="md-nav__link">
+        正则要单独开一章
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vikki%20%E7%9A%84%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F/ancient/about%20%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A/" class="md-nav__link">
+        about 数据绑定
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vikki%20%E7%9A%84%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F/ancient/loadMore/" class="md-nav__link">
+        loadMore
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vikki%20%E7%9A%84%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F/ancient/progressiveLoading/" class="md-nav__link">
+        progressiveLoading
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vikki%20%E7%9A%84%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F/%E5%90%8E%E5%8F%B0prototype/" class="md-nav__link">
+        后台prototype
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vikki%20%E7%9A%84%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F/%E7%99%BB%E5%BD%95/" class="md-nav__link">
+        登录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vikki%20%E7%9A%84%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F/%E6%9D%83%E9%99%90/" class="md-nav__link">
+        权限
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vikki%20%E7%9A%84%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F/%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD/" class="md-nav__link">
+        上传下载
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vikki%20%E7%9A%84%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F/%E9%97%AE%E5%8D%B7%E7%9B%B8%E5%85%B3/" class="md-nav__link">
+        问卷相关
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Vikki%20%E7%9A%84%E5%9B%BA%E5%AE%9A%E6%A8%A1%E5%BC%8F/%E8%8A%82%E6%B5%81/" class="md-nav__link">
+        节流
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../import&export.md" class="md-nav__link">
+        import&export
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+          Browser
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Browser
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Browser/%E6%9D%82%E8%AE%B0/" class="md-nav__link">
+        杂记
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Browser/files/" class="md-nav__link">
+        files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Browser/%E5%A4%96%E9%83%A8%E8%B5%84%E6%BA%90/" class="md-nav__link">
+        外部资源
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+          Mobile
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Mobile
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Mobile/%E5%93%8D%E5%BA%94%E5%BC%8F%E8%AE%BE%E8%AE%A1%E4%B8%93%E5%88%8A/" class="md-nav__link">
+        响应式设计专刊
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Mobile/%E5%85%B3%E4%BA%8E%E6%89%8B%E6%9C%BA%E5%B1%8F%E5%B9%95/" class="md-nav__link">
+        关于手机屏幕
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
+          小程序
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          小程序
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%8E%9F%E7%90%86/" class="md-nav__link">
+        原理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E6%9D%82%E7%A2%8E/" class="md-nav__link">
+        杂碎
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/" class="md-nav__link">
+        一些总结
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E7%99%BB%E5%BD%95%E9%80%BB%E8%BE%91/" class="md-nav__link">
+        登录逻辑
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/%E5%B0%8F%E7%A8%8B%E5%BA%8F/%E5%8A%A8%E6%80%81%E5%88%86%E4%BA%AB%E5%9B%BE/" class="md-nav__link">
+        动态分享图
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+          ReactNative
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_8">
+          <span class="md-nav__icon md-icon"></span>
+          ReactNative
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_8_1" id="__nav_4_8_1_label" tabindex="0">
+          Reactnative guide
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_8_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_8_1">
+          <span class="md-nav__icon md-icon"></span>
+          Reactnative guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/ReactNative/reactnative-guide/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/ReactNative/%E5%8E%9F%E7%94%9F/" class="md-nav__link">
+        原生
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/ReactNative/%E6%B6%88%E6%81%AF%E6%8E%A8%E9%80%81/" class="md-nav__link">
+        消息推送
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/ReactNative/Android/" class="md-nav__link">
+        Android
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/ReactNative/IOS/" class="md-nav__link">
+        IOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/ReactNative/%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        基础
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+          CSS
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          CSS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/CSS/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/CSS/flex%20%E4%B8%93%E9%A2%98/" class="md-nav__link">
+        flex 专题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/CSS/grid%20%E4%B8%93%E9%A2%98/" class="md-nav__link">
+        grid 专题
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/CSS/%E5%BC%B9%E7%AA%97%E6%BB%9A%E5%8A%A8%E7%A9%BF%E9%80%8F/" class="md-nav__link">
+        弹窗滚动穿透
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/CSS/%E7%80%91%E5%B8%83%E5%9B%BE%E5%A2%99%E5%B0%8F%E8%B0%83%E7%A0%94/" class="md-nav__link">
+        瀑布图墙小调研
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_10" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
+          Visualization
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          Visualization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/visualization/common-sense/" class="md-nav__link">
+        common-sense
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/visualization/d3/" class="md-nav__link">
+        d3
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_11" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
+          Security
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_11">
+          <span class="md-nav__icon md-icon"></span>
+          Security
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/Security/csrf/" class="md-nav__link">
+        csrf
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_12" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_12">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/misc/%E5%89%8D%E7%AB%AF%E7%9B%91%E6%8E%A7/" class="md-nav__link">
+        前端监控
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/misc/%E6%95%B0%E6%8D%AE%E6%8A%95%E6%94%BE/" class="md-nav__link">
+        数据投放
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/misc/microservice/" class="md-nav__link">
+        microservice
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/misc/rxjs/" class="md-nav__link">
+        rxjs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/misc/swr/" class="md-nav__link">
+        swr
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Backend
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Backend
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+          DevOps
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          DevOps
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/DevOps/docker/" class="md-nav__link">
+        docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/DevOps/k8s/" class="md-nav__link">
+        k8s
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/DevOps/k8s-install/" class="md-nav__link">
+        k8s-install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/DevOps/qs/" class="md-nav__link">
+        qs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/DevOps/%E9%98%BF%E9%87%8C%E4%BA%91/" class="md-nav__link">
+        阿里云
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Database
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Database
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Database/mysql/" class="md-nav__link">
+        mysql
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Database/mongodb/" class="md-nav__link">
+        mongodb
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Database/redis/" class="md-nav__link">
+        redis
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Database/misc/" class="md-nav__link">
+        misc
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Database/%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB/" class="md-nav__link">
+        资源汇总
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Database/ElasticSearch/" class="md-nav__link">
+        ElasticSearch
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Node系列
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Node系列
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Node%E7%B3%BB%E5%88%97/eggjs/" class="md-nav__link">
+        eggjs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Node%E7%B3%BB%E5%88%97/koa/" class="md-nav__link">
+        koa
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Node%E7%B3%BB%E5%88%97/pm2/" class="md-nav__link">
+        pm2
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Java系列
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4">
+          <span class="md-nav__icon md-icon"></span>
+          Java系列
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/basic/" class="md-nav__link">
+        basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/auth/" class="md-nav__link">
+        auth
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/request/" class="md-nav__link">
+        request
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B7%A5%E5%85%B7/" class="md-nav__link">
+        数据库工具
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/AMQP/" class="md-nav__link">
+        AMQP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/Dubbo/" class="md-nav__link">
+        Dubbo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/Intellij/" class="md-nav__link">
+        Intellij
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/Maven/" class="md-nav__link">
+        Maven
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/Spring%20Boot/" class="md-nav__link">
+        Spring Boot
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/Spring%20Cloud%20Stream/" class="md-nav__link">
+        Spring Cloud Stream
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/Web%E5%AE%B9%E5%99%A8/" class="md-nav__link">
+        Web容器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/mybatis-plus/" class="md-nav__link">
+        mybatis-plus
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/resources/" class="md-nav__link">
+        resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/%E4%B8%87%E8%83%BD%20demo/" class="md-nav__link">
+        万能 demo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="md-nav__link">
+        异常处理
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/%E6%8E%92%E9%94%99%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        排错记录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/%E6%B5%8B%E8%AF%95%E4%B8%8Edebug/" class="md-nav__link">
+        测试与debug
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_18" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_18" id="__nav_5_4_18_label" tabindex="0">
+          Spring
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_18_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_18">
+          <span class="md-nav__icon md-icon"></span>
+          Spring
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/Spring/AOP/" class="md-nav__link">
+        AOP
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/Spring/Basic/" class="md-nav__link">
+        Basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/Spring/Factories/" class="md-nav__link">
+        Factories
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/Spring/IoC%E5%AE%B9%E5%99%A8/" class="md-nav__link">
+        IoC容器
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/Spring/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="md-nav__link">
+        数据库
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4_19" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_4_19" id="__nav_5_4_19_label" tabindex="0">
+          Test
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_4_19_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_4_19">
+          <span class="md-nav__icon md-icon"></span>
+          Test
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Java%E7%B3%BB%E5%88%97/test/refs/" class="md-nav__link">
+        refs
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_5" id="__nav_5_5_label" tabindex="0">
+          Go系列
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Go系列
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Go%E7%B3%BB%E5%88%97/%E5%86%99%E6%B3%95%E7%AC%94%E8%AE%B0/" class="md-nav__link">
+        写法笔记
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Go%E7%B3%BB%E5%88%97/gorm/" class="md-nav__link">
+        gorm
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/Go%E7%B3%BB%E5%88%97/pprof/" class="md-nav__link">
+        pprof
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_6" id="__nav_5_6_label" tabindex="0">
+          AWS Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          AWS Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/AWS-Cloud/aws-cloud/" class="md-nav__link">
+        aws-cloud
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/AWS-Cloud/aws-cloud%20practitioner/" class="md-nav__link">
+        aws-cloud practitioner
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7" id="__nav_5_7_label" tabindex="0">
+          Misc
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          Misc
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_7_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5_7_1" id="__nav_5_7_1_label" tabindex="0">
+          一次测试环境搭建记录
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_7_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_7_1">
+          <span class="md-nav__icon md-icon"></span>
+          一次测试环境搭建记录
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/Canal/" class="md-nav__link">
+        Canal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/Docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/ElasticSearch/" class="md-nav__link">
+        ElasticSearch
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/Jenkins/" class="md-nav__link">
+        Jenkins
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/Kibana/" class="md-nav__link">
+        Kibana
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/Maven%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        Maven安装记录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/MySql8%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        MySql8安装记录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/Nexus%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        Nexus安装记录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/OpenJDK%20%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        OpenJDK 安装记录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/RabbitMQ%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        RabbitMQ安装记录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/Redis%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        Redis安装记录
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E4%B8%80%E6%AC%A1%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E8%AE%B0%E5%BD%95/k8s%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/" class="md-nav__link">
+        k8s安装记录
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE/" class="md-nav__link">
+        地理位置
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../关于请求的commonSense.md" class="md-nav__link">
+        关于请求的commonSense
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E6%9C%AF%E8%AF%AD/" class="md-nav__link">
+        术语
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/%E5%BE%AE%E6%9C%8D%E5%8A%A1/" class="md-nav__link">
+        微服务
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/canal/" class="md-nav__link">
+        canal
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/log/" class="md-nav__link">
+        log
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Backend/misc/Prometheus/" class="md-nav__link">
+        Prometheus
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Utilities
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Utilities
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Utilities/nginx/" class="md-nav__link">
+        nginx
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Utilities/proxy/" class="md-nav__link">
+        proxy
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Utilities/Vist-a-local-service/" class="md-nav__link">
+        Vist-a-local-service
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+          Git
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_4">
+          <span class="md-nav__icon md-icon"></span>
+          Git
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Utilities/git/" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Utilities/git/cli/" class="md-nav__link">
+        cli
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+          Mac
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          Mac
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../index.md" class="md-nav__link">
+        index
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_6" id="__nav_6_6_label" tabindex="0">
+          VSCode
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6_6">
+          <span class="md-nav__icon md-icon"></span>
+          VSCode
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Utilities/VSCode/debugger/" class="md-nav__link">
+        debugger
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Utilities/%E5%9B%BE%E7%89%87%E4%B8%8A%E4%BC%A0/" class="md-nav__link">
+        图片上传
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Utilities/jenkins/" class="md-nav__link">
+        jenkins
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    Packages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#booleans-and-conditionals" class="md-nav__link">
+    Booleans and Conditionals
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#collections" class="md-nav__link">
+    Collections
+  </a>
+  
+    <nav class="md-nav" aria-label="Collections">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-interface" class="md-nav__link">
+    List interface
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#class" class="md-nav__link">
+    Class
+  </a>
+  
+    <nav class="md-nav" aria-label="Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enum" class="md-nav__link">
+    Enum
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    记录类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    获取文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interface" class="md-nav__link">
+    Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-vs-abstract-class" class="md-nav__link">
+    Interface v.s. abstract class
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    反射
+  </a>
+  
+    <nav class="md-nav" aria-label="反射">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class_1" class="md-nav__link">
+    class 类
+  </a>
+  
+    <nav class="md-nav" aria-label="class 类">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    动态加载
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    执行顺序
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field" class="md-nav__link">
+    Field
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    Method
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    获取构造方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    是否是子类
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    函数相关
+  </a>
+  
+    <nav class="md-nav" aria-label="函数相关">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generics" class="md-nav__link">
+    泛型 generics
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotation" class="md-nav__link">
+    Annotation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error" class="md-nav__link">
+    Error
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system" class="md-nav__link">
+    System
+  </a>
+  
+    <nav class="md-nav" aria-label="System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#out" class="md-nav__link">
+    out
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concurrency" class="md-nav__link">
+    Concurrency
+  </a>
+  
+    <nav class="md-nav" aria-label="Concurrency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#callable" class="md-nav__link">
+    Callable
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#future" class="md-nav__link">
+    Future
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#race-condition" class="md-nav__link">
+    Race Condition
+  </a>
+  
+    <nav class="md-nav" aria-label="Race Condition">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reentrant-lock" class="md-nav__link">
+    Reentrant lock
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atomic" class="md-nav__link">
+    Atomic
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synchronized" class="md-nav__link">
+    Synchronized
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jvm" class="md-nav__link">
+    jvm 相关
+  </a>
+  
+    <nav class="md-nav" aria-label="jvm 相关">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package" class="md-nav__link">
+    Package
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-loading" class="md-nav__link">
+    Class Loading
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javap-disassembler" class="md-nav__link">
+    javap Disassembler
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    网络编程
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="1-index">1. index</h1>
+<p>History:
+1992, Sun microsystems(后被 Oracle 收购) -&gt; 因为想开发 platform-independent 移动软件从而启发的语言。一开始命名为开发者窗前的oak 树，后才变成了 coffee java -&gt; 哇一开始 Java 还装在了浏览器里，是 js 的设定呀…</p>
+<blockquote>
+<p><strong>Java is an informal word for "coffee,"</strong> (from that coffee from the Island of Java) so the next time you go out for breakfast, you can jauntily order a cup of java.</p>
+<p>The world that Java arrived into was very different to the one we live in today. Microsoft was counting down to their August release of Windows 95 (which would launch without a Web browser). Netscape was yet to go public (IPO) on the NASDAQ exchange, although its browser was steadily gaining in popularity. The Internet, as a whole, was yet to truly enter the public consciousness.</p>
+</blockquote>
+<p><a href="https://www.reddit.com/r/AskHistorians/comments/19alr05/java_was_released_in_1995_while_the_first_version/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button">Java was released in 1995, while the first version of Python came out four years earlier. What has led to Java becoming more popular, while Python has only overtaken it in recent years</a>
+天时地利人和，借着 Internet 的东风，并且 jdk2 就推出了 jdbc 等服务端特性，又成功打入后端。</p>
+<p>As a harbinger of things to come, Sun’s initial release of the Java language was accompanied by HotJava, a browser intended to compete with the then-dominant Mosaic browser, and to supercede it via the introduction of richer, dynamic applications using Java’s applet technology. Despite this, few could have predicted the impact that Java’s seemingly modest release would ultimately have.</p>
+<p><a href="https://blog.csdn.net/wangpaiblog/article/details/114489538">Java EE 为什么要改名为 Jakarta EE？Jakarta 不是印度尼西亚的首都吗？-CSDN博客</a></p>
+<p>1995, first implementation,「Write Once, Run Anywhere」的正牌始祖</p>
+<p>那么，JavaScript 为什么以 java 为头呢 =&gt; 同样是 1995 年，The name JavaScript <strong>came from Netscape's support of Java applets within its browser</strong>. Many say it was also a marketing tactic to divert some attention from Java, which was the most buzzed-about language at the time.（我去 原来是想碰瓷来的</p>
+<p>Compilation:  不一定是 target machine code 哦，还可以是 bytedcode 和 other programming language</p>
+<p>Platform Dependency Reasons:</p>
+<ul>
+<li>Opreating System</li>
+<li>Executable file format ~ PE(Windows), ELF(Linux)</li>
+<li>System calls, e.g., file opening</li>
+<li>Hardware</li>
+<li>Processor ~ x86 vs ARM Instruction sets</li>
+</ul>
+<p>Java 介于 compilation 和 interpretation 的中间：source code(java, scala, groovy) -&gt; [Java compiler] -&gt; Java bytecode(.class)(conpacted, optimised) -&gt; (Java interpreter/jvm)(JIT compilation: just in time) -&gt; results</p>
+<p>JVM:</p>
+<ul>
+<li>instruction set -&gt; Java bytecode: Loading &amp; interpreting Java bytecode</li>
+<li>Security</li>
+<li>Manipulates memory at runtime -&gt; Automatic memory management</li>
+</ul>
+<p>One <strong>JVM instance</strong> for one java bytecode</p>
+<p>JDK: JRE + Debug tools</p>
+<p>JRE: JVM + libs</p>
+<p>JIT:</p>
+<p>频繁执行的代码 -&gt; hot spot -&gt; cache Machine Code</p>
+<p>Inlay hints</p>
+<p>关于JDK(Dev tools includes compiler + JRE java runtime environment):</p>
+<ul>
+<li>OpenJDK - GPL V2协议，可以免费使用，源码开放</li>
+<li>OracleJDK、amazon的Corretto JDK 等等，称为发行版</li>
+</ul>
+<p><a href="https://blog.csdn.net/wangpaiblog/article/details/112342415">Java SE、OpenJDK、Java EE、Java 框架、Java ME 等概念之间的区别-CSDN博客</a></p>
+<p>对于不同语言的特性和它们适合的场景，我又有了更深的认识，虽然被猪猪说是「民科」🤣 像 Java 这种纯粹的面向对象语言，特别适合维护数据结构，所以在服务端发挥光大； JS 偏函数式又面向过程，所以很贴合前端的各种回调；而 Golang 的写法其实我很喜欢，不搞 OOP 只有单纯的 struct，并且 go routine 无脑调。</p>
+<p>但，每种语言没有的部分，也在逐渐的补充，有时会让人觉得有点杂糅：</p>
+<ul>
+<li>
+<p>JS 的对象维护，之前的构造函数和 prototype 在我看来其实就是「披着 class 外衣的函数」，所以后来又出了 class。其实我更喜欢 go 的 struct type, 我觉得更契合函数式编程的理念。</p>
+</li>
+<li>
+<p>Java 不能单独存在函数，所以需要「稍后执行的方法」都得先构造个类出来先，就比较麻烦。所以后来出现了 λ 充当回调函数。但它的实现和 JS 并不一样，比如前者在回调函数内可以获取到外层的变量，是因为函数调用栈的缘故；而后者实际是 copy 了一份外层的值传到函数里，因此使用的变量必须是 final 的，不然就可能和外面对不上了。</p>
+</li>
+<li>Golang 之前没有泛型真的很麻烦，因为这就意味着外界一定得知道入参的基本结构，然后 reflect 强行转换，一转换不上就得报错了。</li>
+</ul>
+<h2 id="packages">Packages</h2>
+<ul>
+<li>顶部的 import 是为了开发者方便，编译时会将代码里的类替换成 complete path 类名的</li>
+<li>fully qualified class name v.s. simple class name</li>
+<li><code>javac someClassPath</code></li>
+<li><code>javac -classpath absoluteClassPathDirectory someClassPath</code></li>
+<li><code>echo $CLASSPATH</code></li>
+<li>java (参数是)类名</li>
+<li><a href="https://blog.wangqi.love/articles/Java/%E5%8F%AF%E6%89%A7%E8%A1%8Cjar%E5%8C%85.html">可执行jar包 | wangqi的blog</a></li>
+<li>在Java虚拟机执行的时候，JVM只看完整类名，因此，只要包名不同，类就不同。包没有父子关系。java.util和java.util.zip是不同的包，两者没有任何继承关系。</li>
+</ul>
+<h2 id="variables">Variables</h2>
+<ul>
+<li>lowerCamelCase</li>
+<li>Strongly Typed (consistent with)</li>
+<li><a href="https://stackoverflow.com/questions/4006302/why-is-java-string-type-written-in-capital-letter-while-int-is-not">Why is Java "String" type written in capital letter while "int" is not?</a> // data type of an object will start with upperCase, and that will hold an object reference.</li>
+<li>char - single quote!(2 bytes unsigned integer) - Java 的 unicode(character set) implementation/store(encoding schema)：utf-16 - &lt;'B', \u0042, 66, 0x0042&gt;, which means that char variable can be initialized by unicode escape seq., char literal and int literal.</li>
+<li><strong>whole</strong> numbers: byte(1 byte) short(2 bytes) int(4 bytes - 2 billion) as opposed to long(with L at the end - 8 bytes) // 1 billion = 9 zeros // 赋值可以是其他进制，打印出来是十进制</li>
+<li><strong>Decimal</strong> numbers: float(4 bytes, 6-7 decimal digits) double(8 bytes, 15-16 decimal digits) BigDecimal(used with money) // always stick to int&amp;double</li>
+<li>instance variable (assignment statements cannot appear at class level), local variables(dont get default value)</li>
+<li>type cast: here s is of larger type and the method is not applying a type cast</li>
+</ul>
+<h2 id="booleans-and-conditionals">Booleans and Conditionals</h2>
+<ul>
+<li>String.equals()</li>
+</ul>
+<h2 id="functions">Functions</h2>
+<ul>
+<li>
+<p>Parameters/Formal parameters are values the function <strong>expects to receive</strong>. Arguments/Actual parameters are the values being <strong>passed in</strong>.</p>
+</li>
+<li>
+<p>Method signature includes only method name and parameter list and not the methods return type.</p>
+</li>
+<li>
+<p>Object state  v.s. class-level</p>
+</li>
+<li>
+<p>Method Overloading</p>
+</li>
+<li>
+<p>varargs 相当于 js 的 spread.. <code>public static void main(String[] args){</code>} or <code>public static void main(String... args){}</code></p>
+</li>
+<li>
+<p>Math.random</p>
+</li>
+</ul>
+<pre><code class="language-java">  double randomNumber = Math.random() * 3;
+  int integer = (int) randomNumber;
+
+  switch (integer) {
+    case 0: return &quot;rock&quot;;
+    case 1: return &quot;paper&quot;;
+    case 2: return &quot;scissors&quot;;
+    default: return &quot;&quot;;  //default case not possible.
+
+  }
+</code></pre>
+<ul>
+<li>传值还是传引用？
+传值。当传对象的时候，实参 hold 的是“对象的地址”，形参接收过来，也复制了一份“对象的地址”并将自己指向它。
+(实际上，我觉得 js 里也是传对象地址这个值，只是可能 js 里本来没有地址这个概念，为便于解释，就会统一说成传引用了)</li>
+</ul>
+<h2 id="collections">Collections</h2>
+<h3 id="list-interface">List interface</h3>
+<p>可以按照 Positional, Search, Iteration, Range-view 这么来分类</p>
+<ul>
+<li>
+<p>print array: print refrence that point to it -&gt; Arrays.toSring(arr)</p>
+</li>
+<li>
+<p>Arrays.copyOf()</p>
+</li>
+<li>
+<p>ArrayList: can only store objects. It cant store primitive.</p>
+</li>
+<li>
+<p><code>*ArrayList*&lt;*String*&gt; names = new *ArrayList*&lt;*String*&gt;();</code></p>
+</li>
+</ul>
+<blockquote>
+<p>ArrayList is a kind of List and List implements Collection interface. <strong>The Collection container expects only Objects data types and all the operations done in Collections, like iterations, can be performed only on Objects and not Primitive data types</strong></p>
+</blockquote>
+<ul>
+<li>.stream().filter().forEach()
+    （stream 是惰性求值的）</li>
+</ul>
+<pre><code class="language-java">  // creating a Stream of strings 
+  Stream&lt;String&gt; s = Stream.of(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;); 
+
+  // using Collectors toList() function 
+  List&lt;String&gt; myList = s.collect(Collectors.toList()); 
+
+  ArrayList&lt;String&gt; myArrayList = new ArrayList&lt;String&gt;();
+  myArrayList.addAll(myList);
+
+</code></pre>
+<ul>
+<li>
+<p>Convert from array: Arrays.asList(SomeArray);</p>
+</li>
+<li>
+<p>List interface:</p>
+</li>
+<li>Array.sort: min -&gt; max</li>
+<li>常见数组操作<ul>
+<li>新建：<code>new ArrayList&lt;&gt;(intCapacity)</code></li>
+<li>新建：<code>new ArrayList&lt;&gt;(Arrays.asList("a", "b"))</code>;</li>
+<li>新建：<code>new ArrayList&lt;&gt;(List.of("a", "b"))</code>;</li>
+<li>新增批量：<code>Collections.addAll(arrayList, "c", "d")</code>;</li>
+<li>从复制中新建：<code>java.util.Arrays.copyOfRange(LineSegment[] original, int from, int to)</code></li>
+<li>Stream 操作:<ul>
+<li>`xxList.stream().allMatch();</li>
+<li><code>xxList.stream().collect(Collectors.groupingBy(xx::getName));</code></li>
+<li>去重取值：<code>detailList.stream().filter(ele -&gt; ele.getId().equals(ele.getPid())).distinct().collect(Collectors.toList());</code></li>
+<li><code>xxList.stream().collect(Collectors.toMap(xx::getName, Function.identity()))</code><ul>
+<li>如果 key 值有重复，会报错 <code>IllegalStateException: Duplicate key</code>, 需要类似 <code>Map&lt;String, String&gt; phoneBook = people.stream().collect（Collectors.toMap(Person::getName, Person::getAddress, (a1, a2) -&gt; a1));</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="class">Class</h2>
+<ul>
+<li>关于 getter 和 setter<ul>
+<li>我自己会认为有时被滥用了虽然在 Java 里这是一种 convention.</li>
+<li>另外，Getters and setters do not affect memory usage. The method implementations of getter/setter are stored with the <code>Class</code> of which there is only one (in a given classloader). The instances only store the state of the object. jvm 会对 getter/setter 进行优化的</li>
+<li>I think that if you use lombok to create getters and setters, you probably don't need them.</li>
+</ul>
+</li>
+<li>Private(fields) vs Public(methods, constructors) // 称为 access modifiers 或 access levels</li>
+<li>Default Constructor: Compiler inserts one with no params(no-args constructor) // constructor 建筑工人</li>
+<li><strong>overloads</strong> four constructors: 可以在 constructor 里的第一句里调用 <code>this(..)</code>//但是只能调用一次、并且还没有初始化完毕的哟</li>
+<li>Primitive(cant be null) v.s. Class Type(can be null)</li>
+<li>Mutable vs immutable</li>
+<li>Wrapper Class: Every (<strong>immutable</strong>) class wraps primitive, when needs to be nullable, or needs to call methods.</li>
+</ul>
+<pre><code class="language-java">public boolean equals(Object obj) {
+  if (obj == null) {
+    return false;
+  }
+
+  if (!(obj instanceof Item)) {
+    return false;
+  }
+
+  Item item = (Item)obj; // 先判断是不是一个对象，再 typecast 做对象值判断
+  return this.name.equals(item.name) &amp;&amp; this.price == item.price;
+}
+</code></pre>
+<ul>
+<li>Object that are <code>equal</code> must always share the same <code>hashCode</code></li>
+<li>private constructor: Class cant be initianted, like Math class</li>
+</ul>
+<h3 id="enum">Enum</h3>
+<p>Java 的 enum 本身就是一个 final Class 无法被继承. 一些踩到的点：
+ <a href="https://stackoverflow.com/questions/443980/why-cant-enums-constructor-access-static-fields">Why can't enum's constructor access static fields?</a>: 需要使用 static 块来初始化 static 变量</p>
+<p>遍历数据：
+- Arrays.stream(xxEnum.values())
+- Arrays.asList(seasons.values()).
+                  forEach(season -&gt; System.out.println(season));</p>
+<h3 id="_1">记录类</h3>
+<p>使用<code>String</code>、<code>Integer</code>等类型的时候，这些类型都是不变类，一个不变类具有以下特点：</p>
+<ol>
+<li>定义class时使用<code>final</code>，无法派生子类；</li>
+<li>每个字段使用<code>final</code>，保证创建实例后无法修改任何字段。</li>
+</ol>
+<p>假设我们希望定义一个<code>Point</code></p>
+<h2 id="_2">获取文件</h2>
+<pre><code class="language-java">URL path1 = this.getClass().getResource(fileName);
+URL path2 = this.getClass().getClassLoader().getResource(fileName);
+</code></pre>
+<p>第一种：The process of finding the resource will be delegated to the class object’s class loader. In other words, the getResouce() method defined on the Class instance will eventually call ClassLoader‘s getResouce() method. 入参 fileName 可以即是 absolute 又是 relative, relative 的话就是相对 class's package.</p>
+<p>第二种：The ClassLoader class uses a delegation model to search for classes and resources. 所以实际上执行操作的是 the ClassLoader's parent ClassLoader.</p>
+<h2 id="interface">Interface</h2>
+<ul>
+<li>Mostly only public abstract methods.<ul>
+<li>public static final fields.</li>
+<li>abstract method.</li>
+<li>default method: instance method and should be overridable.</li>
+<li>static method.</li>
+</ul>
+</li>
+<li>No state, non-instantiable.</li>
+<li>Reference type, not object type</li>
+<li>Marker interface, like Java.lang.Cloneable</li>
+<li>Default method: 避免 interface 新增方法时，实现它的类不兼容的情况</li>
+<li>Static method</li>
+</ul>
+<h3 id="interface-vs-abstract-class">Interface v.s. abstract class</h3>
+<p>Philosophy: Interface 是 has/can do，代表有什么特性，因此可以 implement 多个；而 abstract class 是 is-a，代表本性
+Design：前者 strategyt method design pattern, 后者template design pattern（比方说有default implementation）</p>
+<h2 id="_3">反射</h2>
+<h3 id="class_1">class 类</h3>
+<p><code>class</code>是由JVM在执行过程中动态加载的。JVM在第一次读取到一种<code>class</code>类型时，就为其创建一个<code>Class</code>类型的实例，并关联起来，将其加载进内存。</p>
+<p>反射定义：通过<code>Class</code>获取<code>class</code>实例信息的方法。</p>
+<ul>
+<li>通过 <strong>Class</strong> ： Class cls = String.class;</li>
+<li>通过<strong>实例</strong>：Class cls = s.getClass();</li>
+<li>通过完整类名：Class cls = Class.forName("java.lang.String"); // 返回 the instance of this Class</li>
+</ul>
+<p>Class 匹配比 instanceof 更精确，限定当前 class</p>
+<p>通过 Class 实例获取基本信息：</p>
+<pre><code class="language-java">public class Main {
+    public static void main(String[] args) {
+        printClassInfo(&quot;&quot;.getClass()); // 注意返回的是实例哦
+        printClassInfo(Runnable.class);
+        printClassInfo(java.time.Month.class);
+        printClassInfo(String[].class);
+        printClassInfo(int.class);
+    }
+
+    static void printClassInfo(Class cls) {
+        System.out.println(&quot;Class name: &quot; + cls.getName());
+        System.out.println(&quot;Simple name: &quot; + cls.getSimpleName());
+        if (cls.getPackage() != null) {
+            System.out.println(&quot;Package name: &quot; + cls.getPackage().getName());
+        }
+        System.out.println(&quot;is interface: &quot; + cls.isInterface());
+        System.out.println(&quot;is enum: &quot; + cls.isEnum());
+        System.out.println(&quot;is array: &quot; + cls.isArray());
+        System.out.println(&quot;is primitive: &quot; + cls.isPrimitive());
+    }
+}
+
+</code></pre>
+<h4 id="_4">动态加载</h4>
+<p>JVM在执行Java程序的时候，并不是一次性把所有用到的class全部加载到内存，而是第一次需要用到class时才加载，因此可以在运行期根据条件来控制加载class。</p>
+<p>比如通过 <code>Class.forName(name);</code> 判断某库有没有在 classpath 里，并执行不同方法。</p>
+<h4 id="_5">执行顺序</h4>
+<p>constructor -&gt; static -&gt; load on demand other classes</p>
+<h3 id="field">Field</h3>
+<p>class.gerField()、class.getDeclaredField() 可以获取 Field 实例。</p>
+<p>通过Field实例可以获取字段信息：<code>getName()</code>，<code>getType()</code>，<code>getModifiers()</code>；</p>
+<p>通过Field实例可以读取或设置某个对象的字段，如果存在访问限制，要首先调用<code>setAccessible(true)</code>来访问非<code>public</code>字段。</p>
+<p>通过反射读写字段是一种非常规方法，它会破坏对象的封装。</p>
+<h3 id="method">Method</h3>
+<p>通过<code>Class</code>实例的方法可以获取<code>Method</code>实例：<code>getMethod()</code>，<code>getMethods()</code>，<code>getDeclaredMethod()</code>，<code>getDeclaredMethods()</code>；</p>
+<p>通过<code>Method</code>实例可以获取方法信息：<code>getName()</code>，<code>getReturnType()</code>，<code>getParameterTypes()</code>，<code>getModifiers()</code>；</p>
+<p>通过<code>Method</code>实例可以调用某个对象的方法：<code>Object invoke(Object instance, Object... parameters)</code>；</p>
+<p>通过设置<code>setAccessible(true)</code>来访问非<code>public</code>方法；</p>
+<p>通过反射调用方法时，仍然遵循多态原则。</p>
+<h3 id="_6">获取构造方法</h3>
+<p>// 获取构造方法Integer(int):
+Constructor cons1 = Integer.class.getDeclaredConstructor(int.class);</p>
+<p>// 通过构造方法新建实例:
+Integer n1 = (Integer) cons1.newInstance(123);</p>
+<h3 id="_7">是否是子类</h3>
+<ul>
+<li>类系列<ul>
+<li>B.class.isAssignableFrom(a.getClass())：实际上是判断 (B)a 是否可行</li>
+</ul>
+</li>
+<li>instance系列<ul>
+<li>a instanceof B：注意 primitive type 不行、null 都是 false</li>
+<li>B.isInstance(a)：可以使用 primitive type，此时会被自动装箱</li>
+</ul>
+</li>
+</ul>
+<h2 id="_8">函数相关</h2>
+<p>Functional Interface: 函数定义整的这么复杂呢…</p>
+<blockquote>
+<p>Use <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html"><code>Supplier</code></a> if it takes nothing, but returns something.</p>
+<p>Use <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html"><code>Consumer</code></a> if it takes something, but returns nothing.</p>
+<p>Use <a href="https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/Callable.html"><code>Callable</code></a> if it returns a result and might throw (most akin to <a href="https://en.wikipedia.org/wiki/Thunk"><code>Thunk</code></a> in general CS terms).</p>
+<p>Use <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html"><code>Runnable</code></a> if it does neither and cannot throw.</p>
+</blockquote>
+<p>如果想要自定义一个，比如带自定义 throw 的话：</p>
+<pre><code class="language-java">@FunctionalInterface
+public interface IFetch&lt;X extends Throwable&gt; {
+    String accept() throws X;
+}
+</code></pre>
+<h3 id="generics">泛型 <strong>generics</strong></h3>
+<p>注意存在擦拭的现象</p>
+<h2 id="annotation">Annotation</h2>
+<p>Annotation 真的就是 annotation, 和 js 的 decorator 完全是两个东西 🤣</p>
+<p>定义：通过元注解的方式
+- @Target: <code>ElementType.TYPE</code> <code>ElementType.METHOD</code>
+- @Rentation: 一般是 <code>RetentionPolicy.RUNTIME</code></p>
+<p>三类注解的 @Rentention：
+- 编译器使用：如 @Override, @SuppressWarnings 不会被编译进 .class
+- 底层工具库使用：处理 .class 文件时的注解，在加载class的时候，对class做动态修改。但加载结束后并不会存在于内存中。
+- 用户一般使用：程序运行时存在于 JVM 的注解。</p>
+<p>使用：
+因为注解定义后也是一种<code>class</code>，所有的注解都继承自<code>java.lang.annotation.Annotation</code>，因此，读取注解，需要使用反射API。</p>
+<p><code>Person.class.isAnnotationPresent(Report.class);</code></p>
+<pre><code>AnnotationClass ac = Person.class.getAnnotation(AnnotationClass.class);
+if (ac != null) {
+  // ac.param1() ac.param2()
+}
+</code></pre>
+<p>获取方法参数的注解 <code>m.getParameterAnnotations()</code> 比较复杂, 是多参数和多注解的二维数组。
+p.s. java 的 decorator 有固有的设计模式，decoratorClass 接收原 class 为入参，手动调用想调用的方法。</p>
+<p>E.g. 将 ES 文档对象按照规则转为DTO</p>
+<pre><code class="language-java">public static &lt;T&gt; T doc2DTO(BaseDocument doc, Class&lt;T&gt; clazz) {  
+    //将文档对象转为Map  
+    Map&lt;String, Object&gt; valueMap = BeanUtil.beanToMap(doc, false, false);  
+
+    //创建DTO实例  
+    T dto = ReflectUtil.newInstance(clazz.getName());  
+
+    Field[] fields = ReflectUtil.getFields(clazz);  // DTO 需要有的字段
+
+    for (Field f : fields) {  
+        //填充属性值  
+        fillFieldValue(dto, f, valueMap);  
+    }  
+    return dto;  
+}
+
+private static &lt;T&gt; void fillFieldValue(T t, Field f, Map&lt;String, Object&gt; valueMap) {  
+    ESConfig fieldCfg = f.getAnnotation(ESConfig.class);  
+    if (Objects.isNull(fieldCfg)) {  
+        return;  
+    }  
+    //处理普通字段  
+    if (StrUtil.isNotBlank(fieldCfg.column())) {  
+        Object val = valueMap.get(fieldCfg.column());  
+        if (Objects.nonNull(val)) {  
+            ReflectUtil.setFieldValue(t, f, val);  
+        }    } else if (!fieldCfg.fieldClass().isAssignableFrom(Void.class)) {  
+        //处理自定义对象类型字段  
+        ReflectUtil.setFieldValue(t, f, fillFieldValue(fieldCfg.fieldClass(), valueMap));  
+}}
+
+private static Object fillFieldValue(Class&lt;?&gt; clazz, Map&lt;String, Object&gt; valueMap) {  
+    Object obj = ReflectUtil.newInstance(clazz.getName());  
+    Field[] fields = ReflectUtil.getFields(clazz);  
+
+    for (Field f : fields) {  
+        //填充属性值  
+        fillFieldValue(obj, f, valueMap);  
+    }  
+    return obj;  
+}
+</code></pre>
+<h2 id="error">Error</h2>
+<ul>
+<li>e.getMessage()</li>
+<li>checked exceptions: public static void loadData(...) throws FileNotFoundException {} // force to be caught</li>
+<li>
+<p>multiple catches</p>
+</li>
+<li>
+<p>unchecked exceptions( runtime ): throw IllegalArgumentException IllegalStateException</p>
+</li>
+<li>注册一个实现UncaughtExceptionHandler接口的对象实例处理</li>
+<li>Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler());</li>
+</ul>
+<h2 id="system">System</h2>
+<h3 id="out">out</h3>
+<ul>
+<li>println: <code>\n</code> new line</li>
+</ul>
+<h2 id="concurrency">Concurrency</h2>
+<h4 id="callable">Callable</h4>
+<pre><code class="language-java">Callable&lt;Double&gt; callable = () -&gt; generateNumber();
+FutureTask&lt;Double&gt; future = new FutureTask&lt;&gt;(callable);
+Thread thread2 = new Thread(future);
+
+// future.get();
+</code></pre>
+<h3 id="future">Future</h3>
+<p>见细分页面。</p>
+<h3 id="race-condition">Race Condition</h3>
+<p>Incorrect result from too many threads updating the same thing.</p>
+<h4 id="reentrant-lock">Reentrant lock</h4>
+<pre><code class="language-jav">ReentrantLock lock = new ReentrantLock();
+lock.lock();
+lock.unlock();
+</code></pre>
+<h3 id="atomic">Atomic</h3>
+<p>Atomic allows for synchronized updates across multiple threads.</p>
+<h2 id="synchronized">Synchronized</h2>
+<p>锁对象</p>
+<ul>
+<li>是 *.class 以及 synchronized 修饰的是 static 方法的时候，所有对象公用同一把锁</li>
+<li>修饰普通方法，锁对象默认为 this</li>
+</ul>
+<p>非公平锁：可能导致饥饿现象</p>
+<p>可重入锁：在同一个线程在外层方法获取锁的时候，再进入该线程的内层方法会自动获取锁（前提锁对象得是同一个对象或者class），不会因为之前已经获取过还没释放而阻塞。e.g. 递归时。</p>
+<h2 id="jvm">jvm 相关</h2>
+<h3 id="package">Package</h3>
+<p>Classpath: java 只会在定义的 cp 路径下找包(遵循 pkgName.classname 的格式)，如果没有 Classpath, 则默认为当前文件夹</p>
+<h3 id="class-loading">Class Loading</h3>
+<p>static initializer -&gt; instance initializer -&gt; constructor
+注意：如果引用的某个 static final int XXX = 某个数字，那么在 compile 时就会全局替换掉（宏替换），此时就不至于再 load 对应的 class 了</p>
+<h3 id="javap-disassembler">javap Disassembler</h3>
+<p>-c: prints method bytecode
+-v: method bytecode + constant pool
+然后可以看到 Instruction Set</p>
+<h2 id="_9">网络编程</h2>
+<p>使用Socket进行网络编程时，本质上就是两个进程之间的网络通信。其中一个进程必须充当服务器端，它会主动监听某个指定的端口，另一个进程必须充当客户端，它必须主动连接服务器的IP地址和指定端口，如果连接成功，服务器端和客户端就成功地建立了一个TCP连接，双方后续就可以随时发送和接收数据。
+- 对服务器端来说，它的Socket是指定的IP地址和指定的端口号；
+- 对客户端来说，它的Socket是它所在计算机的IP地址和一个由操作系统分配的随机端口号。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://stackoverflow.com/users/6005860/vikki" target="_blank" rel="noopener" title="stackoverflow.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M290.7 311 95 269.7 86.8 309l195.7 41zm51-87L188.2 95.7l-25.5 30.8 153.5 128.3zm-31.2 39.7L129.2 179l-16.7 36.5L293.7 300zM262 32l-32 24 119.3 160.3 32-24zm20.5 328h-200v39.7h200zm39.7 80H42.7V320h-40v160h359.5V320h-40z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/DearVikki" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:wanqicn@qq.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48H48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0L0 176z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs"], "search": "../../../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
